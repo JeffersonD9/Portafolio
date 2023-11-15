@@ -1,0 +1,27 @@
+
+
+@media (min-width: 1200px ) {
+
+    .formContact{
+        width: 40%;
+    }
+}
+
+@media (min-width: 768px){
+    .formContact{
+        width: 65%;
+    }
+}
+
+@media (max-width: 767px){
+
+    .formContact{
+        width: 80%;
+    }
+}
+
+@media (max-width: 480px){
+    .formContact{
+        width: 90%;
+    }
+}

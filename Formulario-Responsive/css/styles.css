@@ -1,0 +1,118 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+
+    --FondoPrincipal:linear-gradient(225deg, #74ebd5 0%, #9FACE6 100%);
+    --TipoLetra:'Lato', sans-serif;
+    --ColorBordes:rgba(135,131,199,1);
+    --BorderInput:1px solid #9FACE6;
+}
+
+body{
+
+    background-image: var(--FondoPrincipal);
+    font-family:Arial, Helvetica, sans-serif
+    
+}
+
+
+.titulo{
+    text-align: center;
+    text-decoration: none;
+    border: none;
+    margin: 5% 0px 5% 0px;
+ /*arriba-derecha-abajo-izquierda */
+}
+
+ 
+.formContact{
+    height: auto;
+    margin: 80px auto;
+    background-color: white;
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0px 0px 13px 1px var(--ColorBordes);
+}
+
+label{
+   display: block;
+   float: center;
+}
+
+
+input{
+    height: 45px;
+    width: 100%;
+    border-radius: 20px;
+    border: var(--BorderInput);
+    margin-top: 10px;
+    padding-left: 15px;
+    margin-bottom: 20px;
+}
+
+input:focus{
+
+    background-color:white ;
+    outline-color:var(--ColorBordes);
+}
+
+textarea:focus{
+    background-color:white ;
+    outline-color:var(--ColorBordes);
+}
+
+textarea{
+
+    width: 100%;
+    height: 150px;
+    border-radius: 20px;
+    border: var(--BorderInput);
+    margin-top: 10px;
+    margin-bottom: 20px;
+    padding-top: 10px;
+}
+
+.boton a {
+      
+    text-decoration: none;
+    padding: 15px 40px;
+    color: white;
+    margin: auto;
+    border-radius: 20px;
+    font-size: 18px;
+    text-transform: uppercase;
+    background-color:var(--ColorBordes);
+}
+
+.boton{
+
+    margin-top: 15px;
+}
+.boton a:hover{
+
+    color: black;
+    box-shadow: 0px 0px 2px 1px var(--ColorBordes);
+}
+
+h6{
+    margin-top: 15px;
+}
+
+input::placeholder{
+    
+    font-family: var(--TipoLetra);
+}
+
+textarea::placeholder{
+
+    padding-left: 15px;
+    padding-top: 10px;
+}
+
+span{
+    color: red;
+}
