@@ -1,0 +1,63 @@
+:root{
+
+    --fondoNav:#F6F7FC;
+}
+.contenedor{
+
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: 4.688rem 40rem 40rem 40rem auto;
+    grid-template-areas: "header     header"
+                         "contenido  contenido"
+                         "contenido  contenido"
+                         "contenido  contenido"
+                         "contenido  contenido";
+}
+
+/*.contenedor .header{
+
+    background-color:  var(--fondoNav);
+    grid-area: header;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+*/
+
+
+.contenedor .header{
+
+    grid-area: header;
+    max-height: 4.688rem;
+}
+
+.contenedor .contenido{
+
+    grid-area: contenido;
+    display: grid;
+    grid-column:contenido;
+    grid-row: contenido;
+    grid-template-columns: subgrid;
+    grid-template-rows: subgrid;
+    grid-template-areas: "inicio       inicio"
+                         "sobre-mi     sobre-mi"
+                         "habilidades  habilidades" ;
+
+}
+
+.contenedor .inicio{
+
+    grid-area: inicio;
+}
+
+.contenedor .sobre-mi{
+
+    grid-area: sobre-mi;
+}
+
+.contenedor .habilidades{
+
+    grid-area:habilidades;
+}
