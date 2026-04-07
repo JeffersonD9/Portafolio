@@ -1,0 +1,23 @@
+# Dependencies (reinstalled inside builder stage)
+node_modules
+
+# Next.js build output (generated during build stage)
+.next
+
+# Environment files — never bake secrets into the image
+.env
+.env.*
+!.env.*.example
+
+# Dev / OS noise
+.DS_Store
+*.log
+npm-debug.log*
+
+# Git
+.git
+.gitignore
+
+# Docker files themselves
+Dockerfile
+.dockerignore
