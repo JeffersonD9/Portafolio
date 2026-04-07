@@ -7,13 +7,16 @@ import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { Field, FieldGroup, FieldLabel } from "@/components/ui/field"
+import { Turnstile, type TurnstileInstance } from "@marsidev/react-turnstile"
 
 export function ContactSection() {
   const [isSubmitted, setIsSubmitted] = useState(false)
   const [isLoading, setIsLoading] = useState(false)
   const [error, setError] = useState<string | null>(null)
   const [isVisible, setIsVisible] = useState(false)
+  const [turnstileToken, setTurnstileToken] = useState("")
   const sectionRef = useRef<HTMLElement>(null)
+  const turnstileRef = useRef<TurnstileInstance>(null)
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -51,6 +54,8 @@ export function ContactSection() {
       phone: String(formData.get("phone") ?? ""),
       company: String(formData.get("company") ?? ""),
       message: String(formData.get("message") ?? ""),
+      website: String(formData.get("website") ?? ""), // honeypot
+      token: turnstileToken,
     }
 
     try {
@@ -73,6 +78,8 @@ export function ContactSection() {
       setIsSubmitted(true)
     } catch (err) {
       setError(err instanceof Error ? err.message : "Something went wrong. Please try again.")
+      turnstileRef.current?.reset()
+      setTurnstileToken("")
     } finally {
       setIsLoading(false)
     }
@@ -129,6 +136,14 @@ export function ContactSection() {
               </div>
             ) : (
               <form onSubmit={handleSubmit}>
+                {/* Honeypot — bots fill this, humans don't */}
+                <input
+                  name="website"
+                  tabIndex={-1}
+                  autoComplete="off"
+                  aria-hidden="true"
+                  style={{ position: "absolute", opacity: 0, height: 0, width: 0, pointerEvents: "none" }}
+                />
                 <FieldGroup>
                   <Field>
                     <FieldLabel htmlFor="name">Name</FieldLabel>
@@ -161,7 +176,14 @@ export function ContactSection() {
                     </p>
                   )}
 
-                  <Button type="submit" disabled={isLoading} className="btn-glow h-12 w-full rounded-full text-sm font-semibold">
+                  <Turnstile
+                    ref={turnstileRef}
+                    siteKey={process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY ?? "1x00000000000000000000AA"}
+                    onSuccess={setTurnstileToken}
+                    options={{ theme: "dark", size: "invisible" }}
+                  />
+
+                  <Button type="submit" disabled={isLoading || !turnstileToken} className="btn-glow h-12 w-full rounded-full text-sm font-semibold">
                     {isLoading ? "Sending..." : <>
                       Start the conversation
                       <Send className="h-4 w-4" />

@@ -12,6 +12,8 @@ const contactSchema = z.object({
   phone: z.string().max(30).optional().default(""),
   company: z.string().max(150).optional().default(""),
   message: z.string().min(1, "Message is required").max(5000),
+  website: z.string().optional().default(""), // honeypot
+  token: z.string().min(1, "Missing security token"),
 })
 
 // ---------------------------------------------------------------------------
@@ -40,6 +42,26 @@ export async function POST(req: NextRequest) {
       { error: "Validation failed.", issues: parsed.error.flatten().fieldErrors },
       { status: 422 },
     )
+  }
+
+  // Honeypot — bots fill hidden fields, humans don't
+  if (parsed.data.website) {
+    return NextResponse.json({ success: true }, { status: 200 })
+  }
+
+  // Verify Turnstile token with Cloudflare
+  const turnstileRes = await fetch("https://challenges.cloudflare.com/turnstile/v0/siteverify", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({
+      secret: process.env.TURNSTILE_SECRET_KEY,
+      response: parsed.data.token,
+      remoteip: req.headers.get("x-forwarded-for") ?? undefined,
+    }),
+  })
+  const turnstileData = await turnstileRes.json() as { success: boolean }
+  if (!turnstileData.success) {
+    return NextResponse.json({ error: "Security check failed. Please try again." }, { status: 400 })
   }
 
   try {
