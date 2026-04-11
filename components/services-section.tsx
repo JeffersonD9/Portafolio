@@ -8,31 +8,31 @@ const services = [
     icon: Code2,
     title: "Custom Software Development",
     problem: "When your team depends on spreadsheets, chat threads, or disconnected tools, execution becomes slow and error-prone.",
-    result: "We design and build software around your exact workflow so the operation becomes faster, clearer, and easier to manage.",
+    result: "I design and build software around your exact workflow so the operation becomes faster, clearer, and easier to manage.",
   },
   {
     icon: Layers3,
     title: "SaaS Product Development",
     problem: "Product ideas often stall because turning them into a credible SaaS platform requires architecture, UX, and business logic working together.",
-    result: "We help shape and build SaaS products that are launch-ready, commercially credible, and built around real customer use cases.",
+    result: "I help shape and build SaaS products that are launch-ready, commercially credible, and built around real customer use cases.",
   },
   {
     icon: Database,
     title: "CRM & Business Systems",
     problem: "Without a structured customer system, leads, follow-ups, and order context get lost between people and channels.",
-    result: "We create CRM and internal business systems that centralize data, improve follow-up, and give teams better operational visibility.",
+    result: "I build CRM and internal business systems that centralize data, improve follow-up, and give teams better operational visibility.",
   },
   {
     icon: Workflow,
     title: "Process Automation",
     problem: "Manual repetitive work slows down delivery, increases mistakes, and keeps teams busy with low-value tasks.",
-    result: "We automate key workflows so your business saves time, reduces human error, and scales without adding unnecessary friction.",
+    result: "I automate key workflows so your business saves time, reduces human error, and scales without adding unnecessary friction.",
   },
   {
     icon: Globe,
     title: "Landing Pages & Web Platforms",
-    problem: "A weak digital presence makes it harder to explain your offer, capture demand, and look like a serious company.",
-    result: "We build landing pages and web platforms that communicate value clearly and support lead generation, commerce, or product adoption.",
+    problem: "A weak digital presence makes it harder to explain your offer, capture demand, and look like a serious business.",
+    result: "I build landing pages and web platforms that communicate value clearly and support lead generation, commerce, or product adoption.",
   },
 ]
 
@@ -72,7 +72,7 @@ export function ServicesSection() {
             Software services framed around business outcomes.
           </h2>
           <p className="mt-5 text-lg leading-relaxed text-muted-foreground">
-            Each service is designed to answer the real question companies ask: what business problem does this solve, and what changes once it is working?
+            Each service is built around the real question businesses ask: what problem does this solve, and what changes once it is working?
           </p>
         </div>
 

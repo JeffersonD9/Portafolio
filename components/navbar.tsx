@@ -7,7 +7,7 @@ import { useTheme } from "next-themes"
 import { Button } from "@/components/ui/button"
 
 const navLinks = [
-  { href: "#about", label: "Studio" },
+  { href: "#about", label: "About" },
   { href: "#products", label: "Products" },
   { href: "#services", label: "Services" },
   { href: "#contact", label: "Contact" },

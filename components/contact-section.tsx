@@ -15,8 +15,17 @@ export function ContactSection() {
   const [error, setError] = useState<string | null>(null)
   const [isVisible, setIsVisible] = useState(false)
   const [turnstileToken, setTurnstileToken] = useState("")
+  const [message, setMessage] = useState("")
   const sectionRef = useRef<HTMLElement>(null)
   const turnstileRef = useRef<TurnstileInstance>(null)
+
+  useEffect(() => {
+    const prefill = sessionStorage.getItem("contact_prefill")
+    if (prefill) {
+      setMessage(prefill)
+      sessionStorage.removeItem("contact_prefill")
+    }
+  }, [])
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -95,20 +104,20 @@ export function ContactSection() {
               Let&apos;s build software that actually solves your business problems.
             </h2>
             <p className="mt-6 max-w-xl text-lg leading-relaxed text-muted-foreground">
-              If your company needs a product, platform, CRM, or automation flow that feels real and usable, we can shape it together.
+              If you need a product, platform, CRM, or automation flow that feels real and usable, I can help you shape it.
             </p>
 
             <div className="mt-8 space-y-4">
               <div className="rounded-2xl border border-border/70 bg-card/70 p-5">
-                <p className="text-sm font-medium text-foreground">What we can talk about</p>
+                <p className="text-sm font-medium text-foreground">What I can help with</p>
                 <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
-                  New SaaS ideas, internal business systems, order management, sales workflows, process automation, and premium landing pages.
+                  New SaaS ideas, internal business systems, order management, sales workflows, process automation, and custom web platforms.
                 </p>
               </div>
               <div className="rounded-2xl border border-border/70 bg-card/70 p-5">
-                <p className="text-sm font-medium text-foreground">What you can expect</p>
+                <p className="text-sm font-medium text-foreground">What to expect</p>
                 <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
-                  Clear scoping, business-oriented thinking, and a solution approach focused on operational impact instead of generic tech talk.
+                  Clear scoping, business-oriented thinking, and a solution approach focused on operational impact — no generic tech talk.
                 </p>
               </div>
             </div>
@@ -131,7 +140,7 @@ export function ContactSection() {
                 </div>
                 <h3 className="mt-6 text-2xl font-semibold text-foreground">Message received</h3>
                 <p className="mt-3 max-w-md text-sm leading-relaxed text-muted-foreground">
-                  Thanks for reaching out. The next step is to review your context and reply with a path that fits the product or business problem you want to solve.
+                  Thanks for reaching out. I'll review your message and get back to you with a path that fits the product or business problem you want to solve.
                 </p>
               </div>
             ) : (
@@ -167,7 +176,7 @@ export function ContactSection() {
 
                   <Field>
                     <FieldLabel htmlFor="message">What problem are you trying to solve?</FieldLabel>
-                    <Textarea id="message" name="message" placeholder="Tell us about the workflow, bottleneck, or product you want to build." rows={6} required className="rounded-2xl border-border/80 bg-background/65 resize-none" />
+                    <Textarea id="message" name="message" placeholder="Tell me about the workflow, bottleneck, or product you want to build." rows={6} required value={message} onChange={(e) => setMessage(e.target.value)} className="rounded-2xl border-border/80 bg-background/65 resize-none" />
                   </Field>
 
                   {error && (

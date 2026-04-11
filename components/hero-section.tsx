@@ -42,25 +42,26 @@ export function HeroSection() {
         <div>
           <div className={`inline-flex items-center gap-2 rounded-full border border-primary/20 bg-card/70 px-4 py-2 text-sm text-muted-foreground shadow-[0_10px_40px_-25px_rgba(99,102,241,0.9)] transition-all duration-700 ${isVisible ? "translate-y-0 opacity-100" : "translate-y-4 opacity-0"}`}>
             <span className="h-2 w-2 rounded-full bg-accent shadow-[0_0_16px_rgba(34,197,94,0.8)]" />
-            Product-minded software studio for companies that need working systems.
+            Freelance software developer building working systems for real businesses.
           </div>
 
           <h1 className={`mt-8 max-w-4xl text-5xl font-semibold leading-[0.95] tracking-[-0.05em] text-foreground transition-all duration-700 delay-100 sm:text-6xl lg:text-7xl ${isVisible ? "translate-y-0 opacity-100" : "translate-y-4 opacity-0"}`}>
-            We build software that <span className="title-glow">turns messy operations into revenue-ready systems.</span>
+            I build software that <span className="title-glow">turns messy operations into revenue-ready systems.</span>
           </h1>
 
           <p className={`mt-8 max-w-2xl text-lg leading-relaxed text-muted-foreground transition-all duration-700 delay-200 sm:text-xl ${isVisible ? "translate-y-0 opacity-100" : "translate-y-4 opacity-0"}`}>
-            <span className="font-medium text-foreground">Jest Tech</span> helps businesses launch SaaS products, internal platforms,
-            CRMs, and automations that solve real operational problems. This is not a personal portfolio. It is a studio focused on
-            shipping systems that already create measurable value.
+            I&apos;m <span className="font-medium text-foreground">Jefferson</span>, a freelance developer who helps businesses launch SaaS products, internal platforms,
+            CRMs, and automations that solve real operational problems. My focus is on shipping systems that already create measurable value.
           </p>
 
           <div className={`mt-10 flex flex-col gap-4 sm:flex-row transition-all duration-700 delay-300 ${isVisible ? "translate-y-0 opacity-100" : "translate-y-4 opacity-0"}`}>
-            <Button asChild size="lg" className="btn-glow h-12 rounded-full px-7 text-sm font-semibold">
-              <Link href="#products">
-                Explore Products
-                <ArrowRight className="h-4 w-4" />
-              </Link>
+            <Button
+              size="lg"
+              className="btn-glow h-12 rounded-full px-7 text-sm font-semibold"
+              onClick={() => document.getElementById("products")?.scrollIntoView({ behavior: "smooth" })}
+            >
+              Explore Products
+              <ArrowRight className="h-4 w-4" />
             </Button>
             <Button asChild variant="outline" size="lg" className="h-12 rounded-full border-border/80 bg-card/65 px-7 text-sm font-semibold shadow-[0_10px_30px_-20px_rgba(0,0,0,0.6)] hover:border-primary/40 hover:bg-card">
               <Link href="http://76.13.99.14/login?next=%2F" target="_blank" rel="noopener noreferrer">
@@ -118,8 +119,8 @@ export function HeroSection() {
               </div>
 
               <div className="rounded-2xl border border-primary/20 bg-primary/10 p-5">
-                <p className="text-xs uppercase tracking-[0.22em] text-primary">Studio approach</p>
-                <p className="mt-3 text-sm leading-relaxed text-muted-foreground">We build products around the business workflow first, then shape the interface, data, and automation around that reality.</p>
+                <p className="text-xs uppercase tracking-[0.22em] text-primary">My approach</p>
+                <p className="mt-3 text-sm leading-relaxed text-muted-foreground">I build products around the business workflow first, then shape the interface, data, and automation around that reality.</p>
               </div>
             </div>
           </div>

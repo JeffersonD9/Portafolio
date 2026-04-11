@@ -16,7 +16,7 @@ const socialLinks = [
 ]
 
 const navLinks = [
-  { href: "#about", label: "Studio" },
+  { href: "#about", label: "About" },
   { href: "#products", label: "Products" },
   { href: "#services", label: "Services" },
   { href: "#contact", label: "Contact" },
@@ -41,7 +41,7 @@ export function Footer() {
             </Link>
 
             <p className="mt-5 max-w-md text-sm leading-relaxed text-muted-foreground">
-              We build real systems that help companies organize operations, launch products, and solve business problems with software that feels commercially real.
+              I build real systems that help businesses organize operations, launch products, and solve business problems with software that feels commercially real.
             </p>
             <p className="mt-4 text-xs text-muted-foreground">Jefferson Steven Muñoz Delgado</p>
           </div>
@@ -50,13 +50,13 @@ export function Footer() {
             <h4 className="text-sm font-semibold uppercase tracking-[0.24em] text-foreground">Navigation</h4>
             <nav className="mt-5 flex flex-col gap-3">
               {navLinks.map((link) => (
-                <Link
+                <a
                   key={link.href}
                   href={link.href}
                   className="text-sm text-muted-foreground transition-colors duration-200 hover:text-foreground"
                 >
                   {link.label}
-                </Link>
+                </a>
               ))}
             </nav>
           </div>
@@ -82,7 +82,7 @@ export function Footer() {
 
         <div className="mt-10 flex flex-col gap-3 border-t border-border/70 pt-6 text-xs text-muted-foreground md:flex-row md:items-center md:justify-between">
           <p>{new Date().getFullYear()} Jest Tech. All rights reserved.</p>
-          <p>Built as a software solutions studio, not a personal portfolio.</p>
+          <p>Freelance software developer. Real products. Real impact.</p>
         </div>
       </div>
     </footer>

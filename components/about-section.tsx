@@ -22,7 +22,7 @@ const principles = [
   {
     icon: ShieldCheck,
     title: "Reliable Delivery",
-    description: "Jest Tech is positioned as a software studio teams can trust to build products that feel intentional, stable, and scalable.",
+    description: "I'm a developer you can trust to build products that feel intentional, stable, and scalable — without the overhead of an agency.",
   },
 ]
 
@@ -58,12 +58,12 @@ export function AboutSection() {
       <div className="mx-auto max-w-7xl px-6">
         <div className="grid gap-10 lg:grid-cols-[0.95fr_1.05fr] lg:items-end">
           <div className={`transition-all duration-700 ${isVisible ? "translate-y-0 opacity-100" : "translate-y-8 opacity-0"}`}>
-            <span className="section-eyebrow">About The Studio</span>
+            <span className="section-eyebrow">About Me</span>
             <h2 className="mt-4 max-w-2xl text-3xl font-semibold tracking-[-0.04em] text-foreground sm:text-4xl">
-              Jest Tech is built to ship software that already solves real problems.
+              I&apos;m a freelance software developer focused on shipping systems that solve real problems.
             </h2>
             <p className="mt-6 max-w-2xl text-lg leading-relaxed text-muted-foreground">
-              We work like a modern product studio, not a code showcase. Our role is to turn operational friction into software
+              I work with a product mindset — not just as a code executor. My job is to turn operational friction into software
               that teams can actually use, adopt, and grow with.
             </p>
           </div>
@@ -71,9 +71,9 @@ export function AboutSection() {
           <div className={`rounded-[2rem] border border-border/70 bg-card/70 p-7 shadow-[0_25px_70px_-45px_rgba(99,102,241,0.55)] transition-all duration-700 delay-150 ${isVisible ? "translate-y-0 opacity-100" : "translate-y-8 opacity-0"}`}>
             <p className="text-sm uppercase tracking-[0.28em] text-muted-foreground">Positioning</p>
             <p className="mt-4 text-xl font-medium leading-relaxed text-foreground">
-              Premium software solutions studio focused on SaaS products, business platforms, CRM workflows, and automation systems.
+              Freelance developer focused on SaaS products, business platforms, CRM workflows, and automation systems that create real operational value.
             </p>
-            <p className="mt-5 text-sm leading-relaxed text-muted-foreground">Subtle founder credit: Jefferson Steven Muñoz Delgado.</p>
+            <p className="mt-5 text-sm leading-relaxed text-muted-foreground">Jefferson Steven Muñoz Delgado — available for remote projects worldwide.</p>
           </div>
         </div>
 

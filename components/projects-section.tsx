@@ -5,6 +5,13 @@ import { ArrowRight, Building2, ExternalLink, ShoppingBag, Sparkles } from "luci
 import { Button } from "@/components/ui/button"
 import { useEffect, useRef, useState } from "react"
 
+function scrollToContact(prefillMessage?: string) {
+  if (prefillMessage) {
+    sessionStorage.setItem("contact_prefill", prefillMessage)
+  }
+  document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" })
+}
+
 const products = [
   {
     featured: true,
@@ -19,7 +26,7 @@ const products = [
       "It helps teams respond faster, organize orders better, and operate like a business with systems instead of scattered conversations.",
     status: "SaaS in development with real-world usage",
     primaryLabel: "Request Demo Access",
-    primaryHref: "#contact",
+    prefillMessage: "Hi, I'd like to request demo access for Ordento. Here's a bit about my use case:",
     secondaryLabel: "View Preview",
     secondaryHref: "http://76.13.99.14/login?next=%2F",
     icon: Sparkles,
@@ -37,7 +44,8 @@ const products = [
       "The result is more visibility for vendors, stronger customer access, and a platform with clear social and business value.",
     status: "Business impact driven",
     primaryLabel: "Learn More",
-    primaryHref: "#contact",
+    prefillMessage: "",
+    secondaryHref: undefined,
     icon: ShoppingBag,
   },
 ]
@@ -79,7 +87,7 @@ export function ProjectsSection() {
             Real software products with a clear business case behind them.
           </h2>
           <p className="mt-5 text-lg leading-relaxed text-muted-foreground">
-            We present products around the business problem they solve, the workflow they improve, and the value they create.
+            Each product is framed around the business problem it solves, the workflow it improves, and the value it creates.
             The goal is simple: software that feels commercially real.
           </p>
         </div>
@@ -122,11 +130,12 @@ export function ProjectsSection() {
                   </div>
 
                   <div className="mt-8 flex flex-wrap gap-3">
-                    <Button asChild className="btn-glow rounded-full px-5">
-                      <Link href={product.primaryHref}>
-                        {product.primaryLabel}
-                        <ArrowRight className="h-4 w-4" />
-                      </Link>
+                    <Button
+                      className="btn-glow rounded-full px-5"
+                      onClick={() => scrollToContact(product.prefillMessage)}
+                    >
+                      {product.primaryLabel}
+                      <ArrowRight className="h-4 w-4" />
                     </Button>
 
                     {product.secondaryHref && (
@@ -152,7 +161,7 @@ export function ProjectsSection() {
                   <div className="mt-5 rounded-[1.5rem] border border-border/70 bg-card/80 p-6">
                     <p className="text-xs uppercase tracking-[0.24em] text-muted-foreground">Commercial framing</p>
                     <p className="mt-4 text-sm leading-relaxed text-muted-foreground">
-                      We present this as a real product solving an operational issue, not as a repository or technology showcase.
+                      Built as a real product solving an operational issue, not as a repository or technology showcase.
                     </p>
                   </div>
 

@@ -4,28 +4,41 @@ import { ThemeProvider } from '@/components/theme-provider'
 import './globals.css'
 
 export const metadata: Metadata = {
-  title: 'Jest Tech | Software Solutions Studio',
+  title: 'Jefferson Muñoz | Freelance Software Developer — SaaS, CRM & Automation',
   description:
-    'Jest Tech builds SaaS products, business systems, CRM workflows, and automation software that solve real operational problems.',
+    'Jefferson Muñoz is a freelance software developer specializing in SaaS products, CRM systems, business automation, and custom web platforms. I build real software that solves real operational problems.',
   keywords: [
-    'Jest Tech',
-    'Software Solutions Studio',
+    'Jefferson Muñoz',
+    'Freelance Software Developer',
     'SaaS Development',
     'Custom Software Development',
     'CRM Systems',
     'Process Automation',
     'Landing Pages',
+    'Next.js Developer',
+    'React Developer',
+    'Freelance Developer Colombia',
+    'Jest Tech',
+    'Business Automation',
+    'Order Management Software',
   ],
-  authors: [{ name: 'Jest Tech' }],
+  authors: [{ name: 'Jefferson Muñoz' }],
+  creator: 'Jefferson Muñoz',
   openGraph: {
-    title: 'Jest Tech | Software Solutions Studio',
-    description: 'We build real systems that are already solving real business problems.',
+    title: 'Jefferson Muñoz | Freelance Software Developer',
+    description: 'I build real software that solves real operational problems — SaaS products, CRM systems, business automation, and custom platforms.',
     type: 'website',
+    locale: 'en_US',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Jest Tech | Software Solutions Studio',
-    description: 'We build real systems that are already solving real business problems.',
+    title: 'Jefferson Muñoz | Freelance Software Developer',
+    description: 'I build real software that solves real operational problems — SaaS products, CRM systems, business automation, and custom platforms.',
+    creator: '@jeff_mdelgado',
+  },
+  robots: {
+    index: true,
+    follow: true,
   },
 }
 
@@ -35,6 +48,27 @@ export const viewport: Viewport = {
   initialScale: 1,
 }
 
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Person',
+  name: 'Jefferson Steven Muñoz Delgado',
+  jobTitle: 'Freelance Software Developer',
+  description: 'Freelance software developer specializing in SaaS products, CRM systems, business automation, and custom web platforms.',
+  knowsAbout: [
+    'SaaS Development',
+    'CRM Systems',
+    'Process Automation',
+    'Custom Software Development',
+    'Next.js',
+    'React',
+    'TypeScript',
+  ],
+  sameAs: [
+    'https://github.com/JeffersonD9',
+    'https://www.linkedin.com/in/jefferson-steven-mu%C3%B1oz-delgado-a096b1231',
+  ],
+}
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -42,6 +76,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
+      </head>
       <body className="font-sans bg-background text-foreground antialiased">
         <ThemeProvider attribute="class" defaultTheme="dark" enableSystem={false} disableTransitionOnChange={false}>
           {children}
