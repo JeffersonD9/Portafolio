@@ -1,6 +1,6 @@
 "use client"
 
-import { Code2, Database, Globe, Layers3, Workflow } from "lucide-react"
+import { Code2, Database, Globe, Layers3, MessageSquare, Workflow } from "lucide-react"
 import { useEffect, useRef, useState } from "react"
 
 const services = [
@@ -32,7 +32,13 @@ const services = [
     icon: Globe,
     title: "Landing Pages & Web Platforms",
     problem: "A weak digital presence makes it harder to explain your offer, capture demand, and look like a serious business.",
-    result: "I build landing pages and web platforms that communicate value clearly and support lead generation, commerce, or product adoption.",
+    result: "We build landing pages and web platforms that communicate value clearly and support lead generation, commerce, or product adoption.",
+  },
+  {
+    icon: MessageSquare,
+    title: "WhatsApp Sales Bot",
+    problem: "Businesses managing sales through WhatsApp manually lose orders, miss follow-ups, and can't scale without adding people.",
+    result: "We build automated WhatsApp bots that handle the full sales flow — catalog, quotes, order capture, and notifications — without human intervention.",
   },
 ]
 

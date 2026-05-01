@@ -42,16 +42,15 @@ export function HeroSection() {
         <div>
           <div className={`inline-flex items-center gap-2 rounded-full border border-primary/20 bg-card/70 px-4 py-2 text-sm text-muted-foreground shadow-[0_10px_40px_-25px_rgba(99,102,241,0.9)] transition-all duration-700 ${isVisible ? "translate-y-0 opacity-100" : "translate-y-4 opacity-0"}`}>
             <span className="h-2 w-2 rounded-full bg-accent shadow-[0_0_16px_rgba(34,197,94,0.8)]" />
-            Freelance software developer building working systems for real businesses.
+            JestSolution — Software solutions studio building real systems for businesses.
           </div>
 
           <h1 className={`mt-8 max-w-4xl text-5xl font-semibold leading-[0.95] tracking-[-0.05em] text-foreground transition-all duration-700 delay-100 sm:text-6xl lg:text-7xl ${isVisible ? "translate-y-0 opacity-100" : "translate-y-4 opacity-0"}`}>
-            I build software that <span className="title-glow">turns messy operations into revenue-ready systems.</span>
+            We build software that <span className="title-glow">turns messy operations into revenue-ready systems.</span>
           </h1>
 
           <p className={`mt-8 max-w-2xl text-lg leading-relaxed text-muted-foreground transition-all duration-700 delay-200 sm:text-xl ${isVisible ? "translate-y-0 opacity-100" : "translate-y-4 opacity-0"}`}>
-            I&apos;m <span className="font-medium text-foreground">Jefferson</span>, a freelance developer who helps businesses launch SaaS products, internal platforms,
-            CRMs, and automations that solve real operational problems. My focus is on shipping systems that already create measurable value.
+            <span className="font-medium text-foreground">JestSolution</span> is a software solutions studio that helps businesses automate sales on WhatsApp, launch SaaS products, build internal platforms, and solve real operational problems. Our focus is on shipping systems that already create measurable value.
           </p>
 
           <div className={`mt-10 flex flex-col gap-4 sm:flex-row transition-all duration-700 delay-300 ${isVisible ? "translate-y-0 opacity-100" : "translate-y-4 opacity-0"}`}>
@@ -63,11 +62,14 @@ export function HeroSection() {
               Explore Products
               <ArrowRight className="h-4 w-4" />
             </Button>
-            <Button asChild variant="outline" size="lg" className="h-12 rounded-full border-border/80 bg-card/65 px-7 text-sm font-semibold shadow-[0_10px_30px_-20px_rgba(0,0,0,0.6)] hover:border-primary/40 hover:bg-card">
-              <Link href="http://76.13.99.14/login?next=%2F" target="_blank" rel="noopener noreferrer">
-                View Ordento Preview
-                <PlayCircle className="h-4 w-4" />
-              </Link>
+            <Button
+              size="lg"
+              variant="outline"
+              className="h-12 rounded-full border-border/80 bg-card/65 px-7 text-sm font-semibold shadow-[0_10px_30px_-20px_rgba(0,0,0,0.6)] hover:border-primary/40 hover:bg-card"
+              onClick={() => document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" })}
+            >
+              Contact Us
+              <PlayCircle className="h-4 w-4" />
             </Button>
           </div>
 

@@ -20,6 +20,7 @@ const navLinks = [
   { href: "#products", label: "Products" },
   { href: "#services", label: "Services" },
   { href: "#contact", label: "Contact" },
+  { href: "/privacy-policy", label: "Privacy Policy" },
 ]
 
 export function Footer() {
@@ -81,8 +82,8 @@ export function Footer() {
         </div>
 
         <div className="mt-10 flex flex-col gap-3 border-t border-border/70 pt-6 text-xs text-muted-foreground md:flex-row md:items-center md:justify-between">
-          <p>{new Date().getFullYear()} Jest Tech. All rights reserved.</p>
-          <p>Freelance software developer. Real products. Real impact.</p>
+          <p>{new Date().getFullYear()} JestSolution. All rights reserved.</p>
+          <p>Software solutions studio. Real products. Real impact.</p>
         </div>
       </div>
     </footer>

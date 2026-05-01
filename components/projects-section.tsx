@@ -27,8 +27,8 @@ const products = [
     status: "SaaS in development with real-world usage",
     primaryLabel: "Request Demo Access",
     prefillMessage: "Hi, I'd like to request demo access for Ordento. Here's a bit about my use case:",
-    secondaryLabel: "View Preview",
-    secondaryHref: "http://76.13.99.14/login?next=%2F",
+    secondaryLabel: undefined,
+    secondaryHref: undefined,
     icon: Sparkles,
   },
   {
