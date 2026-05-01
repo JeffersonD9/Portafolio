@@ -42,7 +42,7 @@ export async function sendLeadNotification(payload: ContactPayload): Promise<voi
   const recipient = process.env.CONTACT_RECIPIENT ?? process.env.GMAIL_USER
 
   await transporter.sendMail({
-    from: `"Jest Tech Portfolio" <${process.env.GMAIL_USER}>`,
+    from: `"Jest Solution Portfolio" <${process.env.GMAIL_USER}>`,
     to: recipient,
     replyTo: payload.email,
     subject: `New inquiry from ${payload.name}`,
@@ -58,9 +58,9 @@ export async function sendLeadNotification(payload: ContactPayload): Promise<voi
 
 export async function sendConfirmationEmail(payload: ContactPayload): Promise<void> {
   await transporter.sendMail({
-    from: `"Jest Tech" <${process.env.GMAIL_USER}>`,
+    from: `"Jest Solution" <${process.env.GMAIL_USER}>`,
     to: payload.email,
-    subject: "We received your message — Jest Tech",
+    subject: "We received your message — Jest Solution",
     text: buildConfirmationText(payload),
     html: buildConfirmationHtml(payload),
   })
@@ -118,7 +118,7 @@ function buildLeadHtml({ name, email, phone, company, message }: ContactPayload)
   <div class="wrapper">
     <div class="header">
       <h1>New lead — ${escapeHtml(name)}</h1>
-      <span>Received via Jest Tech portfolio · Reply directly to respond</span>
+      <span>Received via Jest Solution portfolio · Reply directly to respond</span>
     </div>
     <div class="body">
       <div class="field">
@@ -167,7 +167,7 @@ function buildConfirmationText({ name }: ContactPayload): string {
     "",
     "In the meantime, feel free to reach us on WhatsApp: https://wa.me/573245220410",
     "",
-    "— Jest Tech",
+    "— Jest Solution",
   ].join("\n")
 }
 
@@ -201,7 +201,7 @@ function buildConfirmationHtml({ name }: ContactPayload): string {
     </div>
     <div class="body">
       <p>
-        Thanks for reaching out to <strong>Jest Tech</strong>. We've received your message
+        Thanks for reaching out to <strong>Jest Solution</strong>. We've received your message
         and will get back to you with a focused response — no generic replies.
       </p>
       <p>
@@ -215,7 +215,7 @@ function buildConfirmationHtml({ name }: ContactPayload): string {
         You're receiving this because you submitted the contact form at jesttech.com.
       </p>
     </div>
-    <div class="footer">Jest Tech · Software Solutions Studio</div>
+    <div class="footer">Jest Solution · Software Solutions Studio</div>
   </div>
 </body>
 </html>

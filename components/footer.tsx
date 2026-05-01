@@ -35,7 +35,7 @@ export function Footer() {
               </span>
               <div className="leading-none">
                 <span className="block text-xl font-semibold tracking-[-0.03em] text-foreground">
-                  Jest <span className="text-primary">Tech</span>
+                  Jest <span className="text-primary">Solution</span>
                 </span>
                 <span className="text-[0.68rem] uppercase tracking-[0.26em] text-muted-foreground">Software Solutions Studio</span>
               </div>

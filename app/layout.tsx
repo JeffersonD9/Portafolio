@@ -9,7 +9,7 @@ export const metadata: Metadata = {
     'JestSolution is a software solutions studio specializing in WhatsApp sales bots, SaaS products, CRM systems, and business automation. We build real software that solves real operational problems.',
   keywords: [
     'JestSolution',
-    'Jest Tech',
+    'Jest Solution',
     'WhatsApp Bot',
     'WhatsApp Sales Bot',
     'SaaS Development',

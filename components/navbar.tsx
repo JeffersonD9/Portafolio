@@ -80,7 +80,7 @@ export function Navbar() {
           </span>
           <div className="leading-none">
             <span className="block text-[1.45rem] font-semibold tracking-[-0.03em] text-foreground">
-              Jest <span className="text-primary">Tech</span>
+              Jest <span className="text-primary">Solution</span>
             </span>
             <span className="text-[0.7rem] uppercase tracking-[0.26em] text-muted-foreground">
               Software Solutions Studio
