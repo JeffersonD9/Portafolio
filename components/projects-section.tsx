@@ -78,17 +78,17 @@ export function ProjectsSection() {
   }, [])
 
   return (
-    <section id="products" ref={sectionRef} className="section-shell relative py-24">
+    <section id="products" ref={sectionRef} className="section-shell relative py-16 md:py-24">
       <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-primary/30 to-transparent" />
       <div className="mx-auto max-w-7xl px-6">
         <div className={`max-w-3xl transition-all duration-700 ${isVisible ? "translate-y-0 opacity-100" : "translate-y-8 opacity-0"}`}>
           <span className="section-eyebrow">Productos</span>
           <h2 className="mt-4 text-3xl font-semibold tracking-[-0.04em] text-foreground sm:text-4xl">
-            Productos de software reales con un caso de negocio claro detrás de ellos.
+            Productos de software en producción con un caso de negocio claro detrás de cada uno.
           </h2>
           <p className="mt-5 text-lg leading-relaxed text-muted-foreground">
-            Cada producto está enmarcado alrededor del problema de negocio que resuelve, el flujo que mejora y el valor que crea.
-            El objetivo es simple: software que se siente comercialmente real.
+            Cada producto está enmarcado alrededor del problema que resuelve, el flujo que mejora y el valor que crea.
+            El objetivo es simple: software que genera ingresos desde el primer día.
           </p>
         </div>
 
@@ -100,7 +100,7 @@ export function ProjectsSection() {
               style={{ transitionDelay: `${index * 140}ms` }}
             >
               <div className="grid gap-0 lg:grid-cols-[1.25fr_0.75fr]">
-                <div className="p-8 md:p-10">
+                <div className="p-6 md:p-8 lg:p-10">
                   <div className="flex flex-wrap items-center gap-4">
                     <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-primary/12 text-primary">
                       <product.icon className="h-7 w-7" />
@@ -114,7 +114,7 @@ export function ProjectsSection() {
                     </div>
                   </div>
 
-                  <div className="mt-8 grid gap-6 md:grid-cols-3">
+                  <div className="mt-6 grid gap-4 sm:gap-6 md:grid-cols-3">
                     <div>
                       <p className="text-xs uppercase tracking-[0.24em] text-muted-foreground">Problema</p>
                       <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{product.problem}</p>
@@ -129,9 +129,9 @@ export function ProjectsSection() {
                     </div>
                   </div>
 
-                  <div className="mt-8 flex flex-wrap gap-3">
+                  <div className="mt-6 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
                     <Button
-                      className="btn-glow rounded-full px-5"
+                      className="btn-glow w-full rounded-full px-5 sm:w-auto"
                       onClick={() => scrollToContact(product.prefillMessage)}
                     >
                       {product.primaryLabel}
@@ -149,7 +149,7 @@ export function ProjectsSection() {
                   </div>
                 </div>
 
-                <div className="border-t border-border/70 bg-background/45 p-8 lg:border-l lg:border-t-0">
+                <div className="border-t border-border/70 bg-background/45 p-6 md:p-8 lg:border-l lg:border-t-0">
                   <div className="rounded-[1.5rem] border border-border/70 bg-card/80 p-6">
                     <div className="flex items-center gap-3">
                       <Building2 className="h-5 w-5 text-accent" />
@@ -161,7 +161,7 @@ export function ProjectsSection() {
                   <div className="mt-5 rounded-[1.5rem] border border-border/70 bg-card/80 p-6">
                     <p className="text-xs uppercase tracking-[0.24em] text-muted-foreground">Marco comercial</p>
                     <p className="mt-4 text-sm leading-relaxed text-muted-foreground">
-                      Construido como un producto real que resuelve un problema operacional, no como un repositorio o escaparate tecnológico.
+                      Construido como un producto funcional que resuelve un problema de negocio concreto, no como un repositorio o escaparate tecnológico.
                     </p>
                   </div>
                 </div>

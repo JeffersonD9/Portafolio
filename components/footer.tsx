@@ -25,7 +25,7 @@ const navLinks = [
 
 export function Footer() {
   return (
-    <footer className="section-shell border-t border-border/70 py-14">
+    <footer className="section-shell border-t border-border/70 py-10 md:py-14">
       <div className="mx-auto max-w-7xl px-6">
         <div className="grid gap-10 md:grid-cols-[1.1fr_0.7fr_0.8fr]">
           <div>
@@ -42,9 +42,8 @@ export function Footer() {
             </Link>
 
             <p className="mt-5 max-w-md text-sm leading-relaxed text-muted-foreground">
-              Construyo sistemas reales que ayudan a los negocios a organizar operaciones, lanzar productos y resolver problemas con software que se siente comercialmente real.
+              Construimos sistemas que ayudan a los negocios a organizar sus procesos, lanzar productos y resolver problemas con software listo para operar.
             </p>
-            <p className="mt-4 text-xs text-muted-foreground">Jefferson Steven Muñoz Delgado</p>
           </div>
 
           <div>
@@ -83,7 +82,7 @@ export function Footer() {
 
         <div className="mt-10 flex flex-col gap-3 border-t border-border/70 pt-6 text-xs text-muted-foreground md:flex-row md:items-center md:justify-between">
           <p>{new Date().getFullYear()} JestSolution. Todos los derechos reservados.</p>
-          <p>Estudio de software. Productos reales. Impacto real.</p>
+          <p>Estudio de software. Resultados comprobados. Impacto medible.</p>
         </div>
       </div>
     </footer>

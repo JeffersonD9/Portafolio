@@ -8,25 +8,25 @@ const services = [
     icon: Code2,
     title: "Desarrollo de Software a Medida",
     problem: "Cuando tu equipo depende de hojas de cálculo, hilos de chat o herramientas desconectadas, la ejecución se vuelve lenta y propensa a errores.",
-    result: "Diseño y construyo software alrededor de tu flujo exacto para que la operación sea más rápida, clara y fácil de gestionar.",
+    result: "Diseñamos y construimos software alrededor de tu flujo exacto para que la gestión sea más rápida, clara y fácil de escalar.",
   },
   {
     icon: Layers3,
     title: "Desarrollo de Producto SaaS",
     problem: "Las ideas de producto a menudo se estancan porque convertirlas en una plataforma SaaS creíble requiere arquitectura, UX y lógica de negocio trabajando juntas.",
-    result: "Ayudo a dar forma y construir productos SaaS que están listos para lanzar, son comercialmente creíbles y están construidos alrededor de casos de uso reales.",
+    result: "Damos forma y construimos productos SaaS que están listos para lanzar, son comercialmente creíbles y están construidos alrededor de casos de uso concretos.",
   },
   {
     icon: Database,
     title: "CRM y Sistemas de Negocio",
     problem: "Sin un sistema de clientes estructurado, los leads, seguimientos y el contexto de pedidos se pierden entre personas y canales.",
-    result: "Construyo sistemas CRM e internos que centralizan datos, mejoran el seguimiento y dan a los equipos mejor visibilidad operacional.",
+    result: "Construimos sistemas CRM e internos que centralizan datos, mejoran el seguimiento y dan a los equipos mejor visibilidad del negocio.",
   },
   {
     icon: Workflow,
     title: "Automatización de Procesos",
     problem: "El trabajo manual repetitivo ralentiza la entrega, aumenta los errores y mantiene a los equipos ocupados con tareas de bajo valor.",
-    result: "Automatizo flujos clave para que tu negocio ahorre tiempo, reduzca errores humanos y escale sin agregar fricción innecesaria.",
+    result: "Automatizamos flujos clave para que tu negocio ahorre tiempo, reduzca errores humanos y escale sin agregar fricción innecesaria.",
   },
   {
     icon: Globe,
@@ -70,15 +70,15 @@ export function ServicesSection() {
   }, [])
 
   return (
-    <section id="services" ref={sectionRef} className="section-shell py-24">
+    <section id="services" ref={sectionRef} className="section-shell py-16 md:py-24">
       <div className="mx-auto max-w-7xl px-6">
         <div className={`max-w-3xl transition-all duration-700 ${isVisible ? "translate-y-0 opacity-100" : "translate-y-8 opacity-0"}`}>
           <span className="section-eyebrow">Servicios</span>
           <h2 className="mt-4 text-3xl font-semibold tracking-[-0.04em] text-foreground sm:text-4xl">
-            Servicios de software enfocados en resultados de negocio.
+            Desarrollo de software SaaS, automatización de procesos y plataformas web para negocios que quieren escalar.
           </h2>
           <p className="mt-5 text-lg leading-relaxed text-muted-foreground">
-            Cada servicio está construido alrededor de la pregunta real que hacen los negocios: ¿qué problema resuelve esto y qué cambia una vez que está funcionando?
+            Cada servicio está construido alrededor de la pregunta concreta que hacen los negocios: ¿qué problema resuelve esto y qué cambia una vez que está funcionando?
           </p>
         </div>
 

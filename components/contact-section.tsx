@@ -94,21 +94,21 @@ export function ContactSection() {
   }
 
   return (
-    <section id="contact" ref={sectionRef} className="section-shell py-24">
+    <section id="contact" ref={sectionRef} className="section-shell py-16 md:py-24">
       <div className="mx-auto max-w-7xl px-6">
         <div className="grid gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:items-start">
           <div className={`transition-all duration-700 ${isVisible ? "translate-y-0 opacity-100" : "translate-y-8 opacity-0"}`}>
             <span className="section-eyebrow">Contacto</span>
             <h2 className="mt-4 max-w-xl text-3xl font-semibold tracking-[-0.04em] text-foreground sm:text-4xl">
-              Construyamos software que realmente resuelva los problemas de tu negocio.
+              Construyamos el software a medida que tu negocio necesita para operar sin fricciones.
             </h2>
             <p className="mt-6 max-w-xl text-lg leading-relaxed text-muted-foreground">
-              Si necesitas un producto, plataforma, CRM o flujo de automatización que se sienta real y usable, puedo ayudarte a diseñarlo.
+              Si necesitas un producto, plataforma, CRM o flujo de automatización que se sienta funcional y usable, podemos ayudarte a diseñarlo.
             </p>
 
             <div className="mt-8 space-y-4">
               <div className="rounded-2xl border border-border/70 bg-card/70 p-5">
-                <p className="text-sm font-medium text-foreground">En qué puedo ayudarte</p>
+                <p className="text-sm font-medium text-foreground">En qué podemos ayudarte</p>
                 <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
                   Nuevas ideas de SaaS, sistemas internos de negocio, gestión de pedidos, flujos de ventas, automatización de procesos y plataformas web a medida.
                 </p>
@@ -116,7 +116,7 @@ export function ContactSection() {
               <div className="rounded-2xl border border-border/70 bg-card/70 p-5">
                 <p className="text-sm font-medium text-foreground">Qué esperar</p>
                 <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
-                  Alcance claro, pensamiento orientado al negocio y un enfoque de solución centrado en el impacto operacional — sin charla técnica genérica.
+                  Alcance claro, pensamiento orientado al negocio y un enfoque de solución centrado en el impacto — sin charla técnica genérica.
                 </p>
               </div>
             </div>
@@ -139,7 +139,7 @@ export function ContactSection() {
                 </div>
                 <h3 className="mt-6 text-2xl font-semibold text-foreground">Mensaje recibido</h3>
                 <p className="mt-3 max-w-md text-sm leading-relaxed text-muted-foreground">
-                  Gracias por contactarte. Revisaré tu mensaje y te responderé con una propuesta que se ajuste al producto o problema de negocio que quieres resolver.
+                  Gracias por contactarte. Revisaremos tu mensaje y te responderemos con una propuesta que se ajuste al producto o problema de negocio que quieres resolver.
                 </p>
               </div>
             ) : (

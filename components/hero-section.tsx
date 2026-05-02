@@ -1,26 +1,11 @@
 "use client"
 
-import Link from "next/link"
-import { ArrowRight, CheckCircle2, Github, Instagram, Linkedin, PlayCircle } from "lucide-react"
+import { ArrowRight, CheckCircle2, PlayCircle } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { useEffect, useState } from "react"
 
-const socialLinks = [
-  { href: "https://github.com/JeffersonD9", icon: Github, label: "GitHub" },
-  {
-    href: "https://www.linkedin.com/in/jefferson-steven-mu%C3%B1oz-delgado-a096b1231?utm_source=share_via&utm_content=profile&utm_medium=member_ios",
-    icon: Linkedin,
-    label: "LinkedIn",
-  },
-  {
-    href: "https://www.instagram.com/jeff_mdelgado?igsh=MWx6NGxhcm40YndhYw%3D%3D&utm_source=qr",
-    icon: Instagram,
-    label: "Instagram",
-  },
-]
-
 const proofPoints = [
-  "Productos SaaS con flujos operacionales reales",
+  "Productos SaaS con flujos de trabajo estructurados",
   "Sistemas de negocio construidos para ventas, pedidos y ejecución",
   "Automatización que elimina cuellos de botella manuales",
 ]
@@ -38,25 +23,25 @@ export function HeroSection() {
       <div className="absolute left-1/2 top-36 h-72 w-72 -translate-x-1/2 rounded-full bg-primary/20 blur-[120px] hero-orb" />
       <div className="absolute left-[20%] top-[18rem] h-48 w-48 rounded-full bg-accent/10 blur-[110px] hero-orb-delayed" />
 
-      <div className="relative mx-auto grid min-h-[calc(100vh-7rem)] max-w-7xl items-center gap-14 px-6 py-16 lg:grid-cols-[1.15fr_0.85fr]">
+      <div className="relative mx-auto grid max-w-7xl items-center gap-10 px-6 py-16 md:min-h-[calc(100vh-7rem)] lg:gap-14 lg:grid-cols-[1.15fr_0.85fr]">
         <div>
-          <div className={`inline-flex items-center gap-2 rounded-full border border-primary/20 bg-card/70 px-4 py-2 text-sm text-muted-foreground shadow-[0_10px_40px_-25px_rgba(99,102,241,0.9)] transition-all duration-700 ${isVisible ? "translate-y-0 opacity-100" : "translate-y-4 opacity-0"}`}>
+          <div className={`inline-flex max-w-full flex-wrap items-center gap-2 rounded-full border border-primary/20 bg-card/70 px-4 py-2 text-xs text-muted-foreground shadow-[0_10px_40px_-25px_rgba(99,102,241,0.9)] transition-all duration-700 sm:text-sm ${isVisible ? "translate-y-0 opacity-100" : "translate-y-4 opacity-0"}`}>
             <span className="h-2 w-2 rounded-full bg-accent shadow-[0_0_16px_rgba(34,197,94,0.8)]" />
-            JestSolution — Estudio de software que construye sistemas reales para negocios.
+            JestSolution — Desarrollo de software SaaS, automatización y plataformas para negocios.
           </div>
 
-          <h1 className={`mt-8 max-w-4xl text-5xl font-semibold leading-[0.95] tracking-[-0.05em] text-foreground transition-all duration-700 delay-100 sm:text-6xl lg:text-7xl ${isVisible ? "translate-y-0 opacity-100" : "translate-y-4 opacity-0"}`}>
-            Construimos software que <span className="title-glow">convierte operaciones desordenadas en sistemas listos para generar ingresos.</span>
+          <h1 className={`mt-8 max-w-4xl text-[2.35rem] font-semibold leading-[0.95] tracking-[-0.05em] text-foreground transition-all duration-700 delay-100 sm:text-5xl md:text-6xl lg:text-7xl ${isVisible ? "translate-y-0 opacity-100" : "translate-y-4 opacity-0"}`}>
+            Construimos software a medida que <span className="title-glow">convierte procesos desordenados en sistemas listos para generar ingresos.</span>
           </h1>
 
-          <p className={`mt-8 max-w-2xl text-lg leading-relaxed text-muted-foreground transition-all duration-700 delay-200 sm:text-xl ${isVisible ? "translate-y-0 opacity-100" : "translate-y-4 opacity-0"}`}>
-            <span className="font-medium text-foreground">JestSolution</span> es un estudio de software que ayuda a los negocios a automatizar ventas en WhatsApp, lanzar productos SaaS, construir plataformas internas y resolver problemas operacionales reales. Nos enfocamos en entregar sistemas que ya crean valor medible.
+          <p className={`mt-6 max-w-2xl text-base leading-relaxed text-muted-foreground transition-all duration-700 delay-200 sm:text-lg ${isVisible ? "translate-y-0 opacity-100" : "translate-y-4 opacity-0"}`}>
+            <span className="font-medium text-foreground">JestSolution</span> es un estudio de desarrollo de software especializado en SaaS, bots de ventas para WhatsApp, automatización de procesos y plataformas web para negocios en Latinoamérica. Nos enfocamos en entregar sistemas que crean valor medible desde el primer día.
           </p>
 
-          <div className={`mt-10 flex flex-col gap-4 sm:flex-row transition-all duration-700 delay-300 ${isVisible ? "translate-y-0 opacity-100" : "translate-y-4 opacity-0"}`}>
+          <div className={`mt-8 flex flex-col gap-3 sm:flex-row transition-all duration-700 delay-300 ${isVisible ? "translate-y-0 opacity-100" : "translate-y-4 opacity-0"}`}>
             <Button
               size="lg"
-              className="btn-glow h-12 rounded-full px-7 text-sm font-semibold"
+              className="btn-glow h-12 w-full rounded-full px-7 text-sm font-semibold sm:w-auto"
               onClick={() => document.getElementById("products")?.scrollIntoView({ behavior: "smooth" })}
             >
               Ver Productos
@@ -65,7 +50,7 @@ export function HeroSection() {
             <Button
               size="lg"
               variant="outline"
-              className="h-12 rounded-full border-border/80 bg-card/65 px-7 text-sm font-semibold shadow-[0_10px_30px_-20px_rgba(0,0,0,0.6)] hover:border-primary/40 hover:bg-card"
+              className="h-12 w-full rounded-full border-border/80 bg-card/65 px-7 text-sm font-semibold shadow-[0_10px_30px_-20px_rgba(0,0,0,0.6)] hover:border-primary/40 hover:bg-card sm:w-auto"
               onClick={() => document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" })}
             >
               Contáctanos
@@ -82,14 +67,6 @@ export function HeroSection() {
             ))}
           </div>
 
-          <div className={`mt-10 flex flex-wrap items-center gap-4 transition-all duration-700 delay-700 ${isVisible ? "translate-y-0 opacity-100" : "translate-y-4 opacity-0"}`}>
-            {socialLinks.map((social) => (
-              <Link key={social.label} href={social.href} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 rounded-full border border-border/70 bg-card/60 px-4 py-2 text-sm text-muted-foreground transition-all duration-200 hover:border-primary/40 hover:text-primary">
-                <social.icon className="h-4 w-4" />
-                {social.label}
-              </Link>
-            ))}
-          </div>
         </div>
 
         <div className={`transition-all duration-700 delay-300 ${isVisible ? "translate-y-0 opacity-100" : "translate-y-8 opacity-0"}`}>
@@ -121,8 +98,8 @@ export function HeroSection() {
               </div>
 
               <div className="rounded-2xl border border-primary/20 bg-primary/10 p-5">
-                <p className="text-xs uppercase tracking-[0.22em] text-primary">Mi enfoque</p>
-                <p className="mt-3 text-sm leading-relaxed text-muted-foreground">Construyo productos alrededor del flujo del negocio primero, luego diseño la interfaz, los datos y la automatización en función de esa realidad.</p>
+                <p className="text-xs uppercase tracking-[0.22em] text-primary">Nuestro enfoque</p>
+                <p className="mt-3 text-sm leading-relaxed text-muted-foreground">Construimos productos alrededor del flujo del negocio primero, luego diseñamos la interfaz, los datos y la automatización en función de esa lógica.</p>
               </div>
             </div>
           </div>

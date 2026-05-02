@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react"
 import Link from "next/link"
-import { ArrowRight, Github, Instagram, Linkedin, Menu, Moon, Sun, X } from "lucide-react"
+import { ArrowRight, Menu, Moon, Sun, X } from "lucide-react"
 import { useTheme } from "next-themes"
 import { Button } from "@/components/ui/button"
 
@@ -13,19 +13,6 @@ const navLinks = [
   { href: "#contact", label: "Contacto" },
 ]
 
-const socialLinks = [
-  { href: "https://github.com/JeffersonD9", icon: Github, label: "GitHub" },
-  {
-    href: "https://www.linkedin.com/in/jefferson-steven-mu%C3%B1oz-delgado-a096b1231?utm_source=share_via&utm_content=profile&utm_medium=member_ios",
-    icon: Linkedin,
-    label: "LinkedIn",
-  },
-  {
-    href: "https://www.instagram.com/jeff_mdelgado?igsh=MWx6NGxhcm40YndhYw%3D%3D&utm_source=qr",
-    icon: Instagram,
-    label: "Instagram",
-  },
-]
 
 export function Navbar() {
   const [isOpen, setIsOpen] = useState(false)
@@ -79,10 +66,10 @@ export function Navbar() {
             JT
           </span>
           <div className="leading-none">
-            <span className="block text-[1.45rem] font-semibold tracking-[-0.03em] text-foreground">
+            <span className="block text-xl font-semibold tracking-[-0.03em] text-foreground sm:text-[1.45rem]">
               Jest <span className="text-primary">Solution</span>
             </span>
-            <span className="text-[0.7rem] uppercase tracking-[0.26em] text-muted-foreground">
+            <span className="hidden text-[0.7rem] uppercase tracking-[0.26em] text-muted-foreground sm:block">
               Software Solutions Studio
             </span>
           </div>
@@ -105,21 +92,6 @@ export function Navbar() {
         </div>
 
         <div className="hidden items-center gap-3 md:flex">
-          <div className="flex items-center gap-1 rounded-full border border-border/70 bg-card/80 px-2 py-1 shadow-[0_10px_35px_-20px_rgba(99,102,241,0.6)]">
-            {socialLinks.map((social) => (
-              <Link
-                key={social.label}
-                href={social.href}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="rounded-full p-2 text-muted-foreground transition-all duration-200 hover:bg-primary/10 hover:text-primary"
-                aria-label={social.label}
-              >
-                <social.icon className="h-4 w-4" />
-              </Link>
-            ))}
-          </div>
-
           <button
             onClick={toggleTheme}
             className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-border/70 bg-card/80 text-muted-foreground transition-all duration-300 hover:border-primary/50 hover:text-primary hover:shadow-[0_0_25px_rgba(99,102,241,0.15)]"
@@ -174,21 +146,6 @@ export function Navbar() {
                 }}
               >
                 {link.label}
-              </Link>
-            ))}
-          </div>
-
-          <div className="mt-5 flex items-center gap-2 border-t border-border/70 pt-5">
-            {socialLinks.map((social) => (
-              <Link
-                key={social.label}
-                href={social.href}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="rounded-full p-2 text-muted-foreground transition-all duration-200 hover:bg-primary/10 hover:text-primary"
-                aria-label={social.label}
-              >
-                <social.icon className="h-4 w-4" />
               </Link>
             ))}
           </div>
