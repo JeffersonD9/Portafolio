@@ -6,39 +6,39 @@ import { useEffect, useRef, useState } from "react"
 const services = [
   {
     icon: Code2,
-    title: "Custom Software Development",
-    problem: "When your team depends on spreadsheets, chat threads, or disconnected tools, execution becomes slow and error-prone.",
-    result: "I design and build software around your exact workflow so the operation becomes faster, clearer, and easier to manage.",
+    title: "Desarrollo de Software a Medida",
+    problem: "Cuando tu equipo depende de hojas de cálculo, hilos de chat o herramientas desconectadas, la ejecución se vuelve lenta y propensa a errores.",
+    result: "Diseño y construyo software alrededor de tu flujo exacto para que la operación sea más rápida, clara y fácil de gestionar.",
   },
   {
     icon: Layers3,
-    title: "SaaS Product Development",
-    problem: "Product ideas often stall because turning them into a credible SaaS platform requires architecture, UX, and business logic working together.",
-    result: "I help shape and build SaaS products that are launch-ready, commercially credible, and built around real customer use cases.",
+    title: "Desarrollo de Producto SaaS",
+    problem: "Las ideas de producto a menudo se estancan porque convertirlas en una plataforma SaaS creíble requiere arquitectura, UX y lógica de negocio trabajando juntas.",
+    result: "Ayudo a dar forma y construir productos SaaS que están listos para lanzar, son comercialmente creíbles y están construidos alrededor de casos de uso reales.",
   },
   {
     icon: Database,
-    title: "CRM & Business Systems",
-    problem: "Without a structured customer system, leads, follow-ups, and order context get lost between people and channels.",
-    result: "I build CRM and internal business systems that centralize data, improve follow-up, and give teams better operational visibility.",
+    title: "CRM y Sistemas de Negocio",
+    problem: "Sin un sistema de clientes estructurado, los leads, seguimientos y el contexto de pedidos se pierden entre personas y canales.",
+    result: "Construyo sistemas CRM e internos que centralizan datos, mejoran el seguimiento y dan a los equipos mejor visibilidad operacional.",
   },
   {
     icon: Workflow,
-    title: "Process Automation",
-    problem: "Manual repetitive work slows down delivery, increases mistakes, and keeps teams busy with low-value tasks.",
-    result: "I automate key workflows so your business saves time, reduces human error, and scales without adding unnecessary friction.",
+    title: "Automatización de Procesos",
+    problem: "El trabajo manual repetitivo ralentiza la entrega, aumenta los errores y mantiene a los equipos ocupados con tareas de bajo valor.",
+    result: "Automatizo flujos clave para que tu negocio ahorre tiempo, reduzca errores humanos y escale sin agregar fricción innecesaria.",
   },
   {
     icon: Globe,
-    title: "Landing Pages & Web Platforms",
-    problem: "A weak digital presence makes it harder to explain your offer, capture demand, and look like a serious business.",
-    result: "We build landing pages and web platforms that communicate value clearly and support lead generation, commerce, or product adoption.",
+    title: "Landing Pages y Plataformas Web",
+    problem: "Una presencia digital débil dificulta explicar tu oferta, capturar demanda y aparecer como un negocio serio.",
+    result: "Construimos landing pages y plataformas web que comunican valor claramente y apoyan la generación de leads, el comercio o la adopción del producto.",
   },
   {
     icon: MessageSquare,
-    title: "WhatsApp Sales Bot",
-    problem: "Businesses managing sales through WhatsApp manually lose orders, miss follow-ups, and can't scale without adding people.",
-    result: "We build automated WhatsApp bots that handle the full sales flow — catalog, quotes, order capture, and notifications — without human intervention.",
+    title: "Bot de Ventas para WhatsApp",
+    problem: "Los negocios que gestionan ventas manualmente por WhatsApp pierden pedidos, olvidan seguimientos y no pueden escalar sin agregar personas.",
+    result: "Construimos bots de WhatsApp automatizados que manejan el flujo completo de ventas — catálogo, cotizaciones, captura de pedidos y notificaciones — sin intervención humana.",
   },
 ]
 
@@ -73,12 +73,12 @@ export function ServicesSection() {
     <section id="services" ref={sectionRef} className="section-shell py-24">
       <div className="mx-auto max-w-7xl px-6">
         <div className={`max-w-3xl transition-all duration-700 ${isVisible ? "translate-y-0 opacity-100" : "translate-y-8 opacity-0"}`}>
-          <span className="section-eyebrow">Services</span>
+          <span className="section-eyebrow">Servicios</span>
           <h2 className="mt-4 text-3xl font-semibold tracking-[-0.04em] text-foreground sm:text-4xl">
-            Software services framed around business outcomes.
+            Servicios de software enfocados en resultados de negocio.
           </h2>
           <p className="mt-5 text-lg leading-relaxed text-muted-foreground">
-            Each service is built around the real question businesses ask: what problem does this solve, and what changes once it is working?
+            Cada servicio está construido alrededor de la pregunta real que hacen los negocios: ¿qué problema resuelve esto y qué cambia una vez que está funcionando?
           </p>
         </div>
 
@@ -93,9 +93,9 @@ export function ServicesSection() {
                 <service.icon className="h-6 w-6" />
               </div>
               <h3 className="mt-5 text-xl font-semibold tracking-[-0.02em] text-foreground">{service.title}</h3>
-              <p className="mt-4 text-xs uppercase tracking-[0.24em] text-muted-foreground">Business problem</p>
+              <p className="mt-4 text-xs uppercase tracking-[0.24em] text-muted-foreground">Problema del negocio</p>
               <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{service.problem}</p>
-              <p className="mt-5 text-xs uppercase tracking-[0.24em] text-primary">What this solves</p>
+              <p className="mt-5 text-xs uppercase tracking-[0.24em] text-primary">Qué resuelve esto</p>
               <p className="mt-3 text-sm leading-relaxed text-foreground/88">{service.result}</p>
             </article>
           ))}

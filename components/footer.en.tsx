@@ -16,11 +16,11 @@ const socialLinks = [
 ]
 
 const navLinks = [
-  { href: "#about", label: "Nosotros" },
-  { href: "#products", label: "Productos" },
-  { href: "#services", label: "Servicios" },
-  { href: "#contact", label: "Contacto" },
-  { href: "/privacy-policy", label: "Política de Privacidad" },
+  { href: "#about", label: "About" },
+  { href: "#products", label: "Products" },
+  { href: "#services", label: "Services" },
+  { href: "#contact", label: "Contact" },
+  { href: "/privacy-policy", label: "Privacy Policy" },
 ]
 
 export function Footer() {
@@ -42,13 +42,13 @@ export function Footer() {
             </Link>
 
             <p className="mt-5 max-w-md text-sm leading-relaxed text-muted-foreground">
-              Construyo sistemas reales que ayudan a los negocios a organizar operaciones, lanzar productos y resolver problemas con software que se siente comercialmente real.
+              I build real systems that help businesses organize operations, launch products, and solve business problems with software that feels commercially real.
             </p>
             <p className="mt-4 text-xs text-muted-foreground">Jefferson Steven Muñoz Delgado</p>
           </div>
 
           <div>
-            <h4 className="text-sm font-semibold uppercase tracking-[0.24em] text-foreground">Navegación</h4>
+            <h4 className="text-sm font-semibold uppercase tracking-[0.24em] text-foreground">Navigation</h4>
             <nav className="mt-5 flex flex-col gap-3">
               {navLinks.map((link) => (
                 <a
@@ -63,7 +63,7 @@ export function Footer() {
           </div>
 
           <div>
-            <h4 className="text-sm font-semibold uppercase tracking-[0.24em] text-foreground">Redes Sociales</h4>
+            <h4 className="text-sm font-semibold uppercase tracking-[0.24em] text-foreground">Social</h4>
             <div className="mt-5 flex items-center gap-3">
               {socialLinks.map((social) => (
                 <Link
@@ -82,8 +82,8 @@ export function Footer() {
         </div>
 
         <div className="mt-10 flex flex-col gap-3 border-t border-border/70 pt-6 text-xs text-muted-foreground md:flex-row md:items-center md:justify-between">
-          <p>{new Date().getFullYear()} JestSolution. Todos los derechos reservados.</p>
-          <p>Estudio de software. Productos reales. Impacto real.</p>
+          <p>{new Date().getFullYear()} JestSolution. All rights reserved.</p>
+          <p>Software solutions studio. Real products. Real impact.</p>
         </div>
       </div>
     </footer>

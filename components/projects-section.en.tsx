@@ -16,17 +16,17 @@ const products = [
   {
     featured: true,
     title: "Ordento",
-    subtitle: "SaaS de Gestión de Ventas y Pedidos",
-    badge: "Producto Destacado",
+    subtitle: "Sales & Order Management SaaS",
+    badge: "Featured Product",
     problem:
-      "Los negocios en crecimiento frecuentemente manejan sus ventas por WhatsApp y chats dispersos, lo que genera pedidos perdidos, seguimientos manuales y cero visibilidad operacional.",
+      "Growing businesses often run sales through WhatsApp and scattered chats, which creates missed orders, manual follow-up, and zero operational visibility.",
     solution:
-      "Ordento convierte conversaciones en un flujo estructurado con seguimiento de clientes, estados de pedidos, visibilidad de seguimiento y un proceso de ventas más limpio.",
+      "Ordento turns conversations into a structured workflow with customer tracking, order states, follow-up visibility, and a cleaner sales process.",
     value:
-      "Ayuda a los equipos a responder más rápido, organizar mejor los pedidos y operar como un negocio con sistemas en lugar de conversaciones dispersas.",
-    status: "SaaS en desarrollo con uso en producción",
-    primaryLabel: "Solicitar acceso demo",
-    prefillMessage: "Hola, quisiera solicitar acceso demo de Ordento. Aquí un poco sobre mi caso de uso:",
+      "It helps teams respond faster, organize orders better, and operate like a business with systems instead of scattered conversations.",
+    status: "SaaS in development with real-world usage",
+    primaryLabel: "Request Demo Access",
+    prefillMessage: "Hi, I'd like to request demo access for Ordento. Here's a bit about my use case:",
     secondaryLabel: undefined,
     secondaryHref: undefined,
     icon: Sparkles,
@@ -34,16 +34,16 @@ const products = [
   {
     featured: false,
     title: "Mercadillo Campesino",
-    subtitle: "Plataforma digital para el comercio local",
-    badge: "Plataforma de Comercio",
+    subtitle: "Digital platform for local commerce",
+    badge: "Commerce Platform",
     problem:
-      "Los productores locales y operadores de mercados necesitan un mejor canal digital para mostrar productos, organizar la demanda y apoyar el comercio comunitario.",
+      "Local producers and marketplace operators need a better digital channel to showcase products, organize demand, and support community commerce.",
     solution:
-      "Mercadillo Campesino provee una plataforma web que fortalece las operaciones del mercado y da al comercio local una presencia digital más accesible.",
+      "Mercadillo Campesino provides a web platform that strengthens marketplace operations and gives local commerce a more accessible digital presence.",
     value:
-      "El resultado es más visibilidad para los vendedores, mejor acceso de clientes y una plataforma con valor social y comercial claro.",
-    status: "Impacto de negocio comprobado",
-    primaryLabel: "Saber más",
+      "The result is more visibility for vendors, stronger customer access, and a platform with clear social and business value.",
+    status: "Business impact driven",
+    primaryLabel: "Learn More",
     prefillMessage: "",
     secondaryHref: undefined,
     icon: ShoppingBag,
@@ -82,13 +82,13 @@ export function ProjectsSection() {
       <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-primary/30 to-transparent" />
       <div className="mx-auto max-w-7xl px-6">
         <div className={`max-w-3xl transition-all duration-700 ${isVisible ? "translate-y-0 opacity-100" : "translate-y-8 opacity-0"}`}>
-          <span className="section-eyebrow">Productos</span>
+          <span className="section-eyebrow">Products</span>
           <h2 className="mt-4 text-3xl font-semibold tracking-[-0.04em] text-foreground sm:text-4xl">
-            Productos de software reales con un caso de negocio claro detrás de ellos.
+            Real software products with a clear business case behind them.
           </h2>
           <p className="mt-5 text-lg leading-relaxed text-muted-foreground">
-            Cada producto está enmarcado alrededor del problema de negocio que resuelve, el flujo que mejora y el valor que crea.
-            El objetivo es simple: software que se siente comercialmente real.
+            Each product is framed around the business problem it solves, the workflow it improves, and the value it creates.
+            The goal is simple: software that feels commercially real.
           </p>
         </div>
 
@@ -116,15 +116,15 @@ export function ProjectsSection() {
 
                   <div className="mt-8 grid gap-6 md:grid-cols-3">
                     <div>
-                      <p className="text-xs uppercase tracking-[0.24em] text-muted-foreground">Problema</p>
+                      <p className="text-xs uppercase tracking-[0.24em] text-muted-foreground">Problem</p>
                       <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{product.problem}</p>
                     </div>
                     <div>
-                      <p className="text-xs uppercase tracking-[0.24em] text-muted-foreground">Solución</p>
+                      <p className="text-xs uppercase tracking-[0.24em] text-muted-foreground">Solution</p>
                       <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{product.solution}</p>
                     </div>
                     <div>
-                      <p className="text-xs uppercase tracking-[0.24em] text-muted-foreground">Valor de Negocio</p>
+                      <p className="text-xs uppercase tracking-[0.24em] text-muted-foreground">Business Value</p>
                       <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{product.value}</p>
                     </div>
                   </div>
@@ -153,22 +153,22 @@ export function ProjectsSection() {
                   <div className="rounded-[1.5rem] border border-border/70 bg-card/80 p-6">
                     <div className="flex items-center gap-3">
                       <Building2 className="h-5 w-5 text-accent" />
-                      <p className="text-sm font-medium text-foreground">Posicionamiento</p>
+                      <p className="text-sm font-medium text-foreground">Positioning</p>
                     </div>
                     <p className="mt-4 text-sm leading-relaxed text-muted-foreground">{product.status}</p>
                   </div>
 
                   <div className="mt-5 rounded-[1.5rem] border border-border/70 bg-card/80 p-6">
-                    <p className="text-xs uppercase tracking-[0.24em] text-muted-foreground">Marco comercial</p>
+                    <p className="text-xs uppercase tracking-[0.24em] text-muted-foreground">Commercial framing</p>
                     <p className="mt-4 text-sm leading-relaxed text-muted-foreground">
-                      Construido como un producto real que resuelve un problema operacional, no como un repositorio o escaparate tecnológico.
+                      Built as a real product solving an operational issue, not as a repository or technology showcase.
                     </p>
                   </div>
 
                   <div className="mt-5 rounded-[1.5rem] border border-border/70 bg-card/80 p-6">
-                    <p className="text-xs uppercase tracking-[0.24em] text-muted-foreground">Importante</p>
+                    <p className="text-xs uppercase tracking-[0.24em] text-muted-foreground">Important</p>
                     <p className="mt-4 text-sm leading-relaxed text-muted-foreground">
-                      El acceso previo está enlazado directamente, pero las credenciales de acceso no se muestran en ningún lugar del sitio intencionalmente.
+                      Preview access is linked directly, but login credentials are intentionally not shown anywhere on the site.
                     </p>
                   </div>
                 </div>

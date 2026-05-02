@@ -7,10 +7,10 @@ import { useTheme } from "next-themes"
 import { Button } from "@/components/ui/button"
 
 const navLinks = [
-  { href: "#about", label: "Nosotros" },
-  { href: "#products", label: "Productos" },
-  { href: "#services", label: "Servicios" },
-  { href: "#contact", label: "Contacto" },
+  { href: "#about", label: "About" },
+  { href: "#products", label: "Products" },
+  { href: "#services", label: "Services" },
+  { href: "#contact", label: "Contact" },
 ]
 
 const socialLinks = [
@@ -123,7 +123,7 @@ export function Navbar() {
           <button
             onClick={toggleTheme}
             className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-border/70 bg-card/80 text-muted-foreground transition-all duration-300 hover:border-primary/50 hover:text-primary hover:shadow-[0_0_25px_rgba(99,102,241,0.15)]"
-            aria-label="Cambiar tema"
+            aria-label="Toggle theme"
           >
             {isDark ? <Sun className="h-4 w-4" /> : <Moon className="h-4 w-4" />}
           </button>
@@ -136,7 +136,7 @@ export function Navbar() {
                 scrollToSection("#contact")
               }}
             >
-              Agendar una llamada
+              Book a Strategy Call
               <ArrowRight className="h-4 w-4" />
             </Link>
           </Button>
@@ -146,14 +146,14 @@ export function Navbar() {
           <button
             onClick={toggleTheme}
             className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-border/70 bg-card/80 text-muted-foreground transition-all duration-300"
-            aria-label="Cambiar tema"
+            aria-label="Toggle theme"
           >
             {isDark ? <Sun className="h-4 w-4" /> : <Moon className="h-4 w-4" />}
           </button>
           <button
             className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-border/70 bg-card/80 text-foreground"
             onClick={() => setIsOpen(!isOpen)}
-            aria-label="Abrir menú"
+            aria-label="Toggle menu"
           >
             {isOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
           </button>
@@ -201,7 +201,7 @@ export function Navbar() {
                 scrollToSection("#contact")
               }}
             >
-              Agendar una llamada
+              Book a Strategy Call
             </Link>
           </Button>
         </div>

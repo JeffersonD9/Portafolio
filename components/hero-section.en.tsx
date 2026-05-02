@@ -20,9 +20,9 @@ const socialLinks = [
 ]
 
 const proofPoints = [
-  "Productos SaaS con flujos operacionales reales",
-  "Sistemas de negocio construidos para ventas, pedidos y ejecución",
-  "Automatización que elimina cuellos de botella manuales",
+  "SaaS products with real operational workflows",
+  "Business systems built around sales, orders, and execution",
+  "Automation that removes manual bottlenecks",
 ]
 
 export function HeroSection() {
@@ -42,15 +42,15 @@ export function HeroSection() {
         <div>
           <div className={`inline-flex items-center gap-2 rounded-full border border-primary/20 bg-card/70 px-4 py-2 text-sm text-muted-foreground shadow-[0_10px_40px_-25px_rgba(99,102,241,0.9)] transition-all duration-700 ${isVisible ? "translate-y-0 opacity-100" : "translate-y-4 opacity-0"}`}>
             <span className="h-2 w-2 rounded-full bg-accent shadow-[0_0_16px_rgba(34,197,94,0.8)]" />
-            JestSolution — Estudio de software que construye sistemas reales para negocios.
+            JestSolution — Software solutions studio building real systems for businesses.
           </div>
 
           <h1 className={`mt-8 max-w-4xl text-5xl font-semibold leading-[0.95] tracking-[-0.05em] text-foreground transition-all duration-700 delay-100 sm:text-6xl lg:text-7xl ${isVisible ? "translate-y-0 opacity-100" : "translate-y-4 opacity-0"}`}>
-            Construimos software que <span className="title-glow">convierte operaciones desordenadas en sistemas listos para generar ingresos.</span>
+            We build software that <span className="title-glow">turns messy operations into revenue-ready systems.</span>
           </h1>
 
           <p className={`mt-8 max-w-2xl text-lg leading-relaxed text-muted-foreground transition-all duration-700 delay-200 sm:text-xl ${isVisible ? "translate-y-0 opacity-100" : "translate-y-4 opacity-0"}`}>
-            <span className="font-medium text-foreground">JestSolution</span> es un estudio de software que ayuda a los negocios a automatizar ventas en WhatsApp, lanzar productos SaaS, construir plataformas internas y resolver problemas operacionales reales. Nos enfocamos en entregar sistemas que ya crean valor medible.
+            <span className="font-medium text-foreground">JestSolution</span> is a software solutions studio that helps businesses automate sales on WhatsApp, launch SaaS products, build internal platforms, and solve real operational problems. Our focus is on shipping systems that already create measurable value.
           </p>
 
           <div className={`mt-10 flex flex-col gap-4 sm:flex-row transition-all duration-700 delay-300 ${isVisible ? "translate-y-0 opacity-100" : "translate-y-4 opacity-0"}`}>
@@ -59,7 +59,7 @@ export function HeroSection() {
               className="btn-glow h-12 rounded-full px-7 text-sm font-semibold"
               onClick={() => document.getElementById("products")?.scrollIntoView({ behavior: "smooth" })}
             >
-              Ver Productos
+              Explore Products
               <ArrowRight className="h-4 w-4" />
             </Button>
             <Button
@@ -68,7 +68,7 @@ export function HeroSection() {
               className="h-12 rounded-full border-border/80 bg-card/65 px-7 text-sm font-semibold shadow-[0_10px_30px_-20px_rgba(0,0,0,0.6)] hover:border-primary/40 hover:bg-card"
               onClick={() => document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" })}
             >
-              Contáctanos
+              Contact Us
               <PlayCircle className="h-4 w-4" />
             </Button>
           </div>
@@ -97,32 +97,32 @@ export function HeroSection() {
             <div className="absolute inset-x-10 top-0 h-px bg-gradient-to-r from-transparent via-primary/60 to-transparent" />
             <div className="flex items-center justify-between rounded-2xl border border-border/60 bg-background/55 px-4 py-3">
               <div>
-                <p className="text-xs uppercase tracking-[0.24em] text-muted-foreground">Sistema Destacado</p>
+                <p className="text-xs uppercase tracking-[0.24em] text-muted-foreground">Featured System</p>
                 <h2 className="mt-1 text-xl font-semibold text-foreground">Ordento</h2>
               </div>
-              <span className="rounded-full border border-accent/30 bg-accent/10 px-3 py-1 text-xs font-medium text-accent">En producción</span>
+              <span className="rounded-full border border-accent/30 bg-accent/10 px-3 py-1 text-xs font-medium text-accent">Real-world usage</span>
             </div>
 
             <div className="mt-6 space-y-4">
               <div className="rounded-2xl border border-border/60 bg-card/75 p-5">
-                <p className="text-xs uppercase tracking-[0.22em] text-muted-foreground">Valor Principal</p>
-                <p className="mt-3 text-lg font-medium text-foreground">Convierte conversaciones de pedidos desestructuradas en un flujo de ventas ordenado.</p>
+                <p className="text-xs uppercase tracking-[0.22em] text-muted-foreground">Core Value</p>
+                <p className="mt-3 text-lg font-medium text-foreground">Converts unstructured order conversations into a clean sales workflow.</p>
               </div>
 
               <div className="grid gap-4 sm:grid-cols-2">
                 <div className="rounded-2xl border border-border/60 bg-card/75 p-5">
-                  <p className="text-xs uppercase tracking-[0.22em] text-muted-foreground">Qué resuelve</p>
-                  <p className="mt-3 text-sm leading-relaxed text-muted-foreground">Los equipos que venden por chat frecuentemente pierden contexto, duplican pedidos y retrasan la entrega.</p>
+                  <p className="text-xs uppercase tracking-[0.22em] text-muted-foreground">What it solves</p>
+                  <p className="mt-3 text-sm leading-relaxed text-muted-foreground">Teams using chat to sell often lose context, duplicate orders, and slow down fulfillment.</p>
                 </div>
                 <div className="rounded-2xl border border-border/60 bg-card/75 p-5">
-                  <p className="text-xs uppercase tracking-[0.22em] text-muted-foreground">Por qué importa</p>
-                  <p className="mt-3 text-sm leading-relaxed text-muted-foreground">Un mejor control de las operaciones de ventas significa respuestas más rápidas, menos errores y mayor visibilidad.</p>
+                  <p className="text-xs uppercase tracking-[0.22em] text-muted-foreground">Why it matters</p>
+                  <p className="mt-3 text-sm leading-relaxed text-muted-foreground">Better control over sales operations means faster response times, fewer mistakes, and clearer visibility.</p>
                 </div>
               </div>
 
               <div className="rounded-2xl border border-primary/20 bg-primary/10 p-5">
-                <p className="text-xs uppercase tracking-[0.22em] text-primary">Mi enfoque</p>
-                <p className="mt-3 text-sm leading-relaxed text-muted-foreground">Construyo productos alrededor del flujo del negocio primero, luego diseño la interfaz, los datos y la automatización en función de esa realidad.</p>
+                <p className="text-xs uppercase tracking-[0.22em] text-primary">My approach</p>
+                <p className="mt-3 text-sm leading-relaxed text-muted-foreground">I build products around the business workflow first, then shape the interface, data, and automation around that reality.</p>
               </div>
             </div>
           </div>

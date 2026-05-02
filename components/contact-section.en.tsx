@@ -78,14 +78,14 @@ export function ContactSection() {
         const data = await res.json().catch(() => ({}))
         if (data.issues) {
           const firstField = Object.values(data.issues as Record<string, string[]>)[0]
-          throw new Error(firstField?.[0] ?? data.error ?? "Error de validación.")
+          throw new Error(firstField?.[0] ?? data.error ?? "Validation failed.")
         }
-        throw new Error(data.error ?? "Algo salió mal. Por favor intenta de nuevo.")
+        throw new Error(data.error ?? "Something went wrong. Please try again.")
       }
 
       setIsSubmitted(true)
     } catch (err) {
-      setError(err instanceof Error ? err.message : "Algo salió mal. Por favor intenta de nuevo.")
+      setError(err instanceof Error ? err.message : "Something went wrong. Please try again.")
       turnstileRef.current?.reset()
       setTurnstileToken("")
     } finally {
@@ -98,25 +98,25 @@ export function ContactSection() {
       <div className="mx-auto max-w-7xl px-6">
         <div className="grid gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:items-start">
           <div className={`transition-all duration-700 ${isVisible ? "translate-y-0 opacity-100" : "translate-y-8 opacity-0"}`}>
-            <span className="section-eyebrow">Contacto</span>
+            <span className="section-eyebrow">Contact</span>
             <h2 className="mt-4 max-w-xl text-3xl font-semibold tracking-[-0.04em] text-foreground sm:text-4xl">
-              Construyamos software que realmente resuelva los problemas de tu negocio.
+              Let&apos;s build software that actually solves your business problems.
             </h2>
             <p className="mt-6 max-w-xl text-lg leading-relaxed text-muted-foreground">
-              Si necesitas un producto, plataforma, CRM o flujo de automatización que se sienta real y usable, puedo ayudarte a diseñarlo.
+              If you need a product, platform, CRM, or automation flow that feels real and usable, I can help you shape it.
             </p>
 
             <div className="mt-8 space-y-4">
               <div className="rounded-2xl border border-border/70 bg-card/70 p-5">
-                <p className="text-sm font-medium text-foreground">En qué puedo ayudarte</p>
+                <p className="text-sm font-medium text-foreground">What I can help with</p>
                 <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
-                  Nuevas ideas de SaaS, sistemas internos de negocio, gestión de pedidos, flujos de ventas, automatización de procesos y plataformas web a medida.
+                  New SaaS ideas, internal business systems, order management, sales workflows, process automation, and custom web platforms.
                 </p>
               </div>
               <div className="rounded-2xl border border-border/70 bg-card/70 p-5">
-                <p className="text-sm font-medium text-foreground">Qué esperar</p>
+                <p className="text-sm font-medium text-foreground">What to expect</p>
                 <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
-                  Alcance claro, pensamiento orientado al negocio y un enfoque de solución centrado en el impacto operacional — sin charla técnica genérica.
+                  Clear scoping, business-oriented thinking, and a solution approach focused on operational impact — no generic tech talk.
                 </p>
               </div>
             </div>
@@ -137,14 +137,13 @@ export function ContactSection() {
                 <div className="flex h-20 w-20 items-center justify-center rounded-full bg-primary/12 text-primary">
                   <CheckCircle className="h-10 w-10" />
                 </div>
-                <h3 className="mt-6 text-2xl font-semibold text-foreground">Mensaje recibido</h3>
+                <h3 className="mt-6 text-2xl font-semibold text-foreground">Message received</h3>
                 <p className="mt-3 max-w-md text-sm leading-relaxed text-muted-foreground">
-                  Gracias por contactarte. Revisaré tu mensaje y te responderé con una propuesta que se ajuste al producto o problema de negocio que quieres resolver.
+                  Thanks for reaching out. I'll review your message and get back to you with a path that fits the product or business problem you want to solve.
                 </p>
               </div>
             ) : (
               <form onSubmit={handleSubmit}>
-                {/* Honeypot — los bots llenan esto, los humanos no */}
                 <input
                   name="website"
                   tabIndex={-1}
@@ -154,28 +153,28 @@ export function ContactSection() {
                 />
                 <FieldGroup>
                   <Field>
-                    <FieldLabel htmlFor="name">Nombre</FieldLabel>
-                    <Input id="name" name="name" placeholder="Tu nombre" required className="h-12 rounded-2xl border-border/80 bg-background/65" />
+                    <FieldLabel htmlFor="name">Name</FieldLabel>
+                    <Input id="name" name="name" placeholder="Your name" required className="h-12 rounded-2xl border-border/80 bg-background/65" />
                   </Field>
 
                   <Field>
-                    <FieldLabel htmlFor="email">Correo electrónico</FieldLabel>
-                    <Input id="email" name="email" type="email" placeholder="tu@empresa.com" required className="h-12 rounded-2xl border-border/80 bg-background/65" />
+                    <FieldLabel htmlFor="email">Email</FieldLabel>
+                    <Input id="email" name="email" type="email" placeholder="you@company.com" required className="h-12 rounded-2xl border-border/80 bg-background/65" />
                   </Field>
 
                   <Field>
-                    <FieldLabel htmlFor="phone">Número de WhatsApp <span className="text-muted-foreground font-normal">(opcional)</span></FieldLabel>
+                    <FieldLabel htmlFor="phone">WhatsApp number <span className="text-muted-foreground font-normal">(optional)</span></FieldLabel>
                     <Input id="phone" name="phone" type="tel" placeholder="+57 300 000 0000" className="h-12 rounded-2xl border-border/80 bg-background/65" />
                   </Field>
 
                   <Field>
-                    <FieldLabel htmlFor="company">Empresa o proyecto</FieldLabel>
-                    <Input id="company" name="company" placeholder="Nombre de la empresa o idea de producto" className="h-12 rounded-2xl border-border/80 bg-background/65" />
+                    <FieldLabel htmlFor="company">Company or project</FieldLabel>
+                    <Input id="company" name="company" placeholder="Company name or product idea" className="h-12 rounded-2xl border-border/80 bg-background/65" />
                   </Field>
 
                   <Field>
-                    <FieldLabel htmlFor="message">¿Qué problema intentas resolver?</FieldLabel>
-                    <Textarea id="message" name="message" placeholder="Cuéntame sobre el flujo de trabajo, cuello de botella o producto que quieres construir." rows={6} required value={message} onChange={(e) => setMessage(e.target.value)} className="rounded-2xl border-border/80 bg-background/65 resize-none" />
+                    <FieldLabel htmlFor="message">What problem are you trying to solve?</FieldLabel>
+                    <Textarea id="message" name="message" placeholder="Tell me about the workflow, bottleneck, or product you want to build." rows={6} required value={message} onChange={(e) => setMessage(e.target.value)} className="rounded-2xl border-border/80 bg-background/65 resize-none" />
                   </Field>
 
                   {error && (
@@ -192,8 +191,8 @@ export function ContactSection() {
                   />
 
                   <Button type="submit" disabled={isLoading || !turnstileToken} className="btn-glow h-12 w-full rounded-full text-sm font-semibold">
-                    {isLoading ? "Enviando..." : <>
-                      Iniciar la conversación
+                    {isLoading ? "Sending..." : <>
+                      Start the conversation
                       <Send className="h-4 w-4" />
                     </>}
                   </Button>
