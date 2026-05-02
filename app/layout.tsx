@@ -4,6 +4,10 @@ import { ThemeProvider } from '@/components/theme-provider'
 import './globals.css'
 
 export const metadata: Metadata = {
+  icons: {
+    icon: '/icon.svg',
+    apple: '/apple-icon.png',
+  },
   title: 'JestSolution | Software Solutions Studio — WhatsApp Bots, SaaS & Automation',
   description:
     'JestSolution is a software solutions studio specializing in WhatsApp sales bots, SaaS products, CRM systems, and business automation. We build real software that solves real operational problems.',

@@ -164,13 +164,6 @@ export function ProjectsSection() {
                       Built as a real product solving an operational issue, not as a repository or technology showcase.
                     </p>
                   </div>
-
-                  <div className="mt-5 rounded-[1.5rem] border border-border/70 bg-card/80 p-6">
-                    <p className="text-xs uppercase tracking-[0.24em] text-muted-foreground">Important</p>
-                    <p className="mt-4 text-sm leading-relaxed text-muted-foreground">
-                      Preview access is linked directly, but login credentials are intentionally not shown anywhere on the site.
-                    </p>
-                  </div>
                 </div>
               </div>
             </article>
