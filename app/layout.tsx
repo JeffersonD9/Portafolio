@@ -68,6 +68,7 @@ export default function RootLayout({
     <html lang="es" suppressHydrationWarning>
       <head>
         <SchemaOrg />
+        <meta name="facebook-domain-verification" content="hn82z2q31mkxt3y4hf202t0if9b8wu" />
       </head>
       <body className="font-sans bg-background text-foreground antialiased">
         <ThemeProvider attribute="class" defaultTheme="dark" enableSystem={false} disableTransitionOnChange={false}>
