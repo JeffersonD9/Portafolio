@@ -65,7 +65,7 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="es" suppressHydrationWarning>
+    <html lang="es-CO" suppressHydrationWarning>
       <head>
         <SchemaOrg />
         <meta name="facebook-domain-verification" content="wmh8m9980zh2k4p7zmuiulrxbnkmq9" />

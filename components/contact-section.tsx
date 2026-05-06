@@ -133,7 +133,7 @@ export function ContactSection() {
 
           <div className={`rounded-[2rem] border border-border/70 bg-card/80 p-8 shadow-[0_30px_90px_-50px_rgba(99,102,241,0.45)] transition-all duration-700 delay-200 ${isVisible ? "translate-y-0 opacity-100" : "translate-y-8 opacity-0"}`}>
             {isSubmitted ? (
-              <div className="flex min-h-[420px] flex-col items-center justify-center text-center animate-fade-in">
+              <div role="status" aria-live="polite" className="flex min-h-[420px] flex-col items-center justify-center text-center animate-fade-in">
                 <div className="flex h-20 w-20 items-center justify-center rounded-full bg-primary/12 text-primary">
                   <CheckCircle className="h-10 w-10" />
                 </div>
@@ -178,17 +178,15 @@ export function ContactSection() {
                     <Textarea id="message" name="message" placeholder="Cuéntame sobre el flujo de trabajo, cuello de botella o producto que quieres construir." rows={6} required value={message} onChange={(e) => setMessage(e.target.value)} className="rounded-2xl border-border/80 bg-background/65 resize-none" />
                   </Field>
 
-                  {error && (
-                    <p className="rounded-xl border border-destructive/30 bg-destructive/10 px-4 py-3 text-sm text-destructive">
-                      {error}
-                    </p>
-                  )}
+                  <p aria-live="assertive" role="alert" className={`rounded-xl border border-destructive/30 bg-destructive/10 px-4 py-3 text-sm text-destructive ${error ? "block" : "hidden"}`}>
+                    {error}
+                  </p>
 
                   <Turnstile
                     ref={turnstileRef}
                     siteKey={process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY ?? "1x00000000000000000000AA"}
                     onSuccess={setTurnstileToken}
-                    options={{ theme: "dark", size: "invisible" }}
+                    options={{ theme: "dark", size: "invisible", execution: "render" }}
                   />
 
                   <Button type="submit" disabled={isLoading || !turnstileToken} className="btn-glow h-12 w-full rounded-full text-sm font-semibold">

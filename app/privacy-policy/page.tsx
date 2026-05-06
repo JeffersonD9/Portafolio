@@ -2,8 +2,8 @@ import type { Metadata } from "next"
 import Link from "next/link"
 
 export const metadata: Metadata = {
-  title: "Privacy Policy | JestSolution",
-  description: "Privacy policy for JestSolution software services and WhatsApp automation bots.",
+  title: "Política de Privacidad | JestSolution",
+  description: "Política de privacidad de JestSolution: cómo recopilamos, usamos y protegemos tu información personal.",
   robots: { index: true, follow: true },
 }
 
@@ -14,20 +14,20 @@ export default function PrivacyPolicyPage() {
         href="/"
         className="mb-10 inline-flex items-center gap-2 text-sm text-muted-foreground transition-colors hover:text-foreground"
       >
-        ← Back to home
+        ← Volver al inicio
       </Link>
 
-      <h1 className="mt-6 text-4xl font-semibold tracking-[-0.04em] text-foreground">Privacy Policy</h1>
-      <p className="mt-3 text-sm text-muted-foreground">Last updated: May 1, 2026</p>
+      <h1 className="mt-6 text-4xl font-semibold tracking-[-0.04em] text-foreground">Política de Privacidad</h1>
+      <p className="mt-3 text-sm text-muted-foreground">Última actualización: 1 de mayo de 2026</p>
 
       <div className="prose prose-invert mt-10 max-w-none space-y-8 text-muted-foreground">
 
         <section>
-          <h2 className="text-xl font-semibold text-foreground">1. Who We Are</h2>
+          <h2 className="text-xl font-semibold text-foreground">1. Quiénes Somos</h2>
           <p className="mt-3 leading-relaxed">
-            JestSolution is a software solutions studio that builds WhatsApp automation bots, SaaS products, CRM systems,
-            and business software. We are operated by Jefferson Steven Muñoz Delgado, based in Bucaramanga, Colombia.
-            You can contact us at{" "}
+            JestSolution es un estudio de software que desarrolla bots de automatización para WhatsApp, productos SaaS,
+            sistemas CRM y software para negocios. Es operado por Jefferson Steven Muñoz Delgado, con sede en
+            Bucaramanga, Colombia. Puedes contactarnos en{" "}
             <a href="mailto:jestdetechsolutions@gmail.com" className="text-primary underline underline-offset-4">
               jestdetechsolutions@gmail.com
             </a>
@@ -36,57 +36,59 @@ export default function PrivacyPolicyPage() {
         </section>
 
         <section>
-          <h2 className="text-xl font-semibold text-foreground">2. Information We Collect</h2>
+          <h2 className="text-xl font-semibold text-foreground">2. Información que Recopilamos</h2>
           <p className="mt-3 leading-relaxed">
-            When you use our contact form or interact with our WhatsApp bots, we may collect:
+            Cuando usas nuestro formulario de contacto o interactúas con nuestros bots de WhatsApp, podemos recopilar:
           </p>
           <ul className="mt-3 list-disc space-y-2 pl-6">
-            <li>Your name and email address</li>
-            <li>Your WhatsApp phone number</li>
-            <li>Your company name and message content</li>
-            <li>Messages and interactions sent through WhatsApp bots operated by our clients</li>
+            <li>Tu nombre y dirección de correo electrónico</li>
+            <li>Tu número de teléfono o WhatsApp</li>
+            <li>El nombre de tu empresa y el contenido de tu mensaje</li>
+            <li>Mensajes e interacciones enviados a través de bots de WhatsApp operados por nuestros clientes</li>
           </ul>
         </section>
 
         <section>
-          <h2 className="text-xl font-semibold text-foreground">3. How We Use Your Information</h2>
-          <p className="mt-3 leading-relaxed">We use the information collected to:</p>
+          <h2 className="text-xl font-semibold text-foreground">3. Cómo Usamos tu Información</h2>
+          <p className="mt-3 leading-relaxed">Usamos la información recopilada para:</p>
           <ul className="mt-3 list-disc space-y-2 pl-6">
-            <li>Respond to your inquiries and provide the services you requested</li>
-            <li>Operate and improve our WhatsApp automation services for our clients</li>
-            <li>Process orders and send order-related notifications through WhatsApp bots</li>
-            <li>Send service-related communications</li>
+            <li>Responder tus consultas y prestarte los servicios que solicitaste</li>
+            <li>Operar y mejorar nuestros servicios de automatización de WhatsApp para nuestros clientes</li>
+            <li>Procesar pedidos y enviar notificaciones relacionadas a través de bots de WhatsApp</li>
+            <li>Enviar comunicaciones relacionadas con el servicio</li>
           </ul>
           <p className="mt-3 leading-relaxed">
-            We do not sell, rent, or share your personal data with third parties for marketing purposes.
+            No vendemos, alquilamos ni compartimos tus datos personales con terceros para fines de marketing.
           </p>
         </section>
 
         <section>
-          <h2 className="text-xl font-semibold text-foreground">4. WhatsApp and Meta Platform</h2>
+          <h2 className="text-xl font-semibold text-foreground">4. WhatsApp y la Plataforma Meta</h2>
           <p className="mt-3 leading-relaxed">
-            Our WhatsApp bots are built on the Meta Cloud API (WhatsApp Business Platform). When you interact with a
-            WhatsApp bot powered by JestSolution, your messages are transmitted through Meta&apos;s infrastructure.
-            Meta&apos;s own privacy policy applies to those interactions. We access only the message content necessary to
-            operate the bot workflow and do not store message history beyond what is required for operational purposes.
+            Nuestros bots de WhatsApp están construidos sobre la API en la Nube de Meta (WhatsApp Business Platform).
+            Cuando interactúas con un bot de WhatsApp desarrollado por JestSolution, tus mensajes se transmiten a través
+            de la infraestructura de Meta. La política de privacidad propia de Meta aplica a esas interacciones. Solo
+            accedemos al contenido del mensaje necesario para operar el flujo del bot y no almacenamos el historial de
+            mensajes más allá de lo requerido para propósitos operativos.
           </p>
         </section>
 
         <section>
-          <h2 className="text-xl font-semibold text-foreground">5. Data Storage and Security</h2>
+          <h2 className="text-xl font-semibold text-foreground">5. Almacenamiento y Seguridad de Datos</h2>
           <p className="mt-3 leading-relaxed">
-            Contact form submissions are delivered via email and are not stored in a public database. Conversation data
-            from WhatsApp bots is stored securely on our servers and is accessible only to the business operator
-            (our client) and JestSolution for support purposes. We apply standard security measures including encrypted
-            connections (HTTPS) and access controls.
+            Los envíos del formulario de contacto se entregan por correo electrónico y no se almacenan en una base de
+            datos pública. Los datos de conversación de los bots de WhatsApp se almacenan de forma segura en nuestros
+            servidores y solo son accesibles para el operador del negocio (nuestro cliente) y JestSolution con fines de
+            soporte. Aplicamos medidas de seguridad estándar, incluyendo conexiones cifradas (HTTPS) y controles de
+            acceso.
           </p>
         </section>
 
         <section>
-          <h2 className="text-xl font-semibold text-foreground">6. Data Retention</h2>
+          <h2 className="text-xl font-semibold text-foreground">6. Retención de Datos</h2>
           <p className="mt-3 leading-relaxed">
-            We retain contact and conversation data only as long as necessary to provide the service. You may request
-            deletion of your data at any time by contacting us at{" "}
+            Conservamos los datos de contacto y conversación solo el tiempo necesario para prestar el servicio. Puedes
+            solicitar la eliminación de tus datos en cualquier momento contactándonos en{" "}
             <a href="mailto:jestdetechsolutions@gmail.com" className="text-primary underline underline-offset-4">
               jestdetechsolutions@gmail.com
             </a>
@@ -95,16 +97,16 @@ export default function PrivacyPolicyPage() {
         </section>
 
         <section>
-          <h2 className="text-xl font-semibold text-foreground">7. Your Rights</h2>
-          <p className="mt-3 leading-relaxed">You have the right to:</p>
+          <h2 className="text-xl font-semibold text-foreground">7. Tus Derechos</h2>
+          <p className="mt-3 leading-relaxed">Tienes derecho a:</p>
           <ul className="mt-3 list-disc space-y-2 pl-6">
-            <li>Access the personal data we hold about you</li>
-            <li>Request correction of inaccurate data</li>
-            <li>Request deletion of your data</li>
-            <li>Withdraw consent for communications at any time</li>
+            <li>Acceder a los datos personales que tenemos sobre ti</li>
+            <li>Solicitar la corrección de datos inexactos</li>
+            <li>Solicitar la eliminación de tus datos</li>
+            <li>Retirar el consentimiento para comunicaciones en cualquier momento</li>
           </ul>
           <p className="mt-3 leading-relaxed">
-            To exercise any of these rights, contact us at{" "}
+            Para ejercer cualquiera de estos derechos, contáctanos en{" "}
             <a href="mailto:jestdetechsolutions@gmail.com" className="text-primary underline underline-offset-4">
               jestdetechsolutions@gmail.com
             </a>
@@ -115,42 +117,44 @@ export default function PrivacyPolicyPage() {
         <section>
           <h2 className="text-xl font-semibold text-foreground">8. Cookies</h2>
           <p className="mt-3 leading-relaxed">
-            This website uses no advertising or tracking cookies. We use Vercel Analytics for anonymous, aggregate
-            traffic analysis. No personally identifiable information is collected through analytics.
+            Este sitio web no usa cookies de publicidad ni de rastreo. Usamos Vercel Analytics para análisis de tráfico
+            anónimo y agregado. No se recopila información de identificación personal a través del análisis.
           </p>
         </section>
 
         <section>
-          <h2 className="text-xl font-semibold text-foreground">9. Changes to This Policy</h2>
+          <h2 className="text-xl font-semibold text-foreground">9. Cambios en Esta Política</h2>
           <p className="mt-3 leading-relaxed">
-            We may update this privacy policy from time to time. The date at the top of this page reflects the most
-            recent revision. Continued use of our services after any changes constitutes acceptance of the updated policy.
+            Podemos actualizar esta política de privacidad de vez en cuando. La fecha en la parte superior de esta
+            página refleja la revisión más reciente. El uso continuado de nuestros servicios después de cualquier
+            cambio constituye la aceptación de la política actualizada.
           </p>
         </section>
 
         <section>
-          <h2 className="text-xl font-semibold text-foreground">10. Contact</h2>
+          <h2 className="text-xl font-semibold text-foreground">10. Contacto</h2>
           <p className="mt-3 leading-relaxed">
-            For any questions about this privacy policy or how we handle your data, contact us at:
+            Para cualquier pregunta sobre esta política de privacidad o sobre cómo manejamos tus datos, contáctanos en:
           </p>
           <ul className="mt-3 list-none space-y-1 pl-0">
             <li>
-              <span className="text-foreground">Email:</span>{" "}
+              <span className="text-foreground">Correo:</span>{" "}
               <a href="mailto:jestdetechsolutions@gmail.com" className="text-primary underline underline-offset-4">
                 jestdetechsolutions@gmail.com
               </a>
             </li>
             <li>
-              <span className="text-foreground">Website:</span>{" "}
-              <a href="https://jestsolution.dev" className="text-primary underline underline-offset-4">
+              <span className="text-foreground">Sitio web:</span>{" "}
+              <a href="https://www.jestsolution.dev" className="text-primary underline underline-offset-4">
                 jestsolution.dev
               </a>
             </li>
             <li>
-              <span className="text-foreground">Location:</span> Bucaramanga, Santander, Colombia
+              <span className="text-foreground">Ubicación:</span> Bucaramanga, Santander, Colombia
             </li>
           </ul>
         </section>
+
       </div>
     </main>
   )

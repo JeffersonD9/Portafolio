@@ -3,4 +3,5 @@ Allow: /
 
 User-agent: *
 Allow: /
+Disallow: /api/
 Sitemap: https://www.jestsolution.dev/sitemap.xml
