@@ -10,7 +10,7 @@ export function SchemaOrg() {
       url: 'https://www.jestsolution.dev/icon.svg',
     },
     description:
-      'Estudio de software especializado en desarrollo SaaS, automatización de procesos, bots de WhatsApp y plataformas web para negocios en Latinoamérica.',
+      'Estudio de desarrollo de software a medida para empresas en crecimiento. Sistemas internos, CRMs, plataformas web, automatización y MVPs. Remoto · Latinoamérica y global.',
     foundingLocation: {
       '@type': 'Place',
       name: 'Bucaramanga, Santander, Colombia',
@@ -21,7 +21,7 @@ export function SchemaOrg() {
       addressRegion: 'Santander',
       addressCountry: 'CO',
     },
-    areaServed: ['CO', 'LATAM'],
+    areaServed: ['CO', 'MX', 'AR', 'CL', 'PE', 'EC', 'Worldwide'],
     sameAs: [
       'https://github.com/JeffersonD9',
       'https://www.linkedin.com/in/jefferson-steven-mu%C3%B1oz-delgado-a096b1231',
@@ -64,7 +64,7 @@ export function SchemaOrg() {
     operatingSystem: 'Web',
     url: 'https://www.jestsolution.dev',
     description:
-      'Plataforma SaaS de gestión de pedidos vía WhatsApp para restaurantes y negocios de alimentos. Automatiza pedidos, pagos y notificaciones.',
+      'Sistema de gestión de ventas y pedidos para equipos que operan por chat. Centraliza clientes, estados de órdenes y visibilidad operacional en tiempo real.',
     offers: {
       '@type': 'Offer',
       availability: 'https://schema.org/InStock',

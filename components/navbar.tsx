@@ -7,12 +7,11 @@ import { useTheme } from "next-themes"
 import { Button } from "@/components/ui/button"
 
 const navLinks = [
-  { href: "#about", label: "Nosotros" },
-  { href: "#products", label: "Productos" },
   { href: "#services", label: "Servicios" },
+  { href: "#projects", label: "Proyectos" },
+  { href: "#process", label: "Proceso" },
   { href: "#contact", label: "Contacto" },
 ]
-
 
 export function Navbar() {
   const [isOpen, setIsOpen] = useState(false)
@@ -63,14 +62,14 @@ export function Navbar() {
           }}
         >
           <span className="flex h-10 w-10 items-center justify-center rounded-2xl border border-primary/35 bg-primary/10 text-sm font-semibold text-primary shadow-[0_0_30px_rgba(99,102,241,0.16)] transition-transform duration-300 group-hover:scale-105">
-            JT
+            JS
           </span>
           <div className="leading-none">
             <span className="block text-xl font-semibold tracking-[-0.03em] text-foreground sm:text-[1.45rem]">
-              Jest <span className="text-primary">Solution</span>
+              Jest<span className="text-primary">Solution</span>
             </span>
             <span className="hidden text-[0.7rem] uppercase tracking-[0.26em] text-muted-foreground sm:block">
-              Software Solutions Studio
+              Software Studio
             </span>
           </div>
         </Link>
@@ -100,17 +99,12 @@ export function Navbar() {
             {isDark ? <Sun className="h-4 w-4" /> : <Moon className="h-4 w-4" />}
           </button>
 
-          <Button asChild className="btn-glow rounded-full px-5">
-            <Link
-              href="#contact"
-              onClick={(event) => {
-                event.preventDefault()
-                scrollToSection("#contact")
-              }}
-            >
-              Agendar una llamada
-              <ArrowRight className="h-4 w-4" />
-            </Link>
+          <Button
+            className="btn-glow rounded-full px-5"
+            onClick={() => scrollToSection("#contact")}
+          >
+            Hablemos
+            <ArrowRight className="h-4 w-4" />
           </Button>
         </div>
 
@@ -150,16 +144,11 @@ export function Navbar() {
             ))}
           </div>
 
-          <Button asChild className="mt-5 w-full rounded-full btn-glow">
-            <Link
-              href="#contact"
-              onClick={(event) => {
-                event.preventDefault()
-                scrollToSection("#contact")
-              }}
-            >
-              Agendar una llamada
-            </Link>
+          <Button
+            className="mt-5 w-full rounded-full btn-glow"
+            onClick={() => scrollToSection("#contact")}
+          >
+            Hablemos
           </Button>
         </div>
       )}

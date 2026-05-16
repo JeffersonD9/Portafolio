@@ -16,9 +16,9 @@ const socialLinks = [
 ]
 
 const navLinks = [
-  { href: "#about", label: "Nosotros" },
-  { href: "#products", label: "Productos" },
   { href: "#services", label: "Servicios" },
+  { href: "#projects", label: "Proyectos" },
+  { href: "#process", label: "Proceso" },
   { href: "#contact", label: "Contacto" },
   { href: "/privacy-policy", label: "Política de Privacidad" },
   { href: "/terms", label: "Términos y Condiciones" },
@@ -32,18 +32,18 @@ export function Footer() {
           <div>
             <Link href="/" className="inline-flex items-center gap-3">
               <span className="flex h-10 w-10 items-center justify-center rounded-2xl border border-primary/35 bg-primary/10 text-sm font-semibold text-primary">
-                JT
+                JS
               </span>
               <div className="leading-none">
                 <span className="block text-xl font-semibold tracking-[-0.03em] text-foreground">
-                  Jest <span className="text-primary">Solution</span>
+                  Jest<span className="text-primary">Solution</span>
                 </span>
-                <span className="text-[0.68rem] uppercase tracking-[0.26em] text-muted-foreground">Software Solutions Studio</span>
+                <span className="text-[0.68rem] uppercase tracking-[0.26em] text-muted-foreground">Software Studio</span>
               </div>
             </Link>
 
             <p className="mt-5 max-w-md text-sm leading-relaxed text-muted-foreground">
-              Construimos sistemas que ayudan a los negocios a organizar sus procesos, lanzar productos y resolver problemas con software listo para operar.
+              Construimos software a medida para empresas en crecimiento. Sistemas internos, plataformas web, automatización y MVPs listos para producción.
             </p>
           </div>
 
@@ -83,7 +83,7 @@ export function Footer() {
 
         <div className="mt-10 flex flex-col gap-3 border-t border-border/70 pt-6 text-xs text-muted-foreground md:flex-row md:items-center md:justify-between">
           <p>© {new Date().getFullYear()} JestSolution. Todos los derechos reservados.</p>
-          <p>Estudio de software. Resultados comprobados. Impacto medible.</p>
+          <p>Desarrollado con precisión. Entregado en producción.</p>
         </div>
       </div>
     </footer>

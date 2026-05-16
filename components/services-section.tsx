@@ -1,44 +1,45 @@
 "use client"
 
-import { Code2, Database, Globe, Layers3, MessageSquare, Workflow } from "lucide-react"
+import { ArrowRight, GitMerge, Globe, Layers3, Rocket } from "lucide-react"
 import { useEffect, useRef, useState } from "react"
+import { Button } from "@/components/ui/button"
 
 const services = [
   {
-    icon: Code2,
-    title: "Desarrollo de Software a Medida",
-    problem: "Cuando tu equipo depende de hojas de cálculo, hilos de chat o herramientas desconectadas, la ejecución se vuelve lenta y propensa a errores.",
-    result: "Diseñamos y construimos software alrededor de tu flujo exacto para que la gestión sea más rápida, clara y fácil de escalar.",
-  },
-  {
     icon: Layers3,
-    title: "Desarrollo de Producto SaaS",
-    problem: "Las ideas de producto a menudo se estancan porque convertirlas en una plataforma SaaS creíble requiere arquitectura, UX y lógica de negocio trabajando juntas.",
-    result: "Damos forma y construimos productos SaaS que están listos para lanzar, son comercialmente creíbles y están construidos alrededor de casos de uso concretos.",
+    eyebrow: "Sistemas & Plataformas",
+    title: "Software a medida para tu operación",
+    description:
+      "CRMs, dashboards operacionales, portales de gestión, ERPs ligeros y sistemas administrativos construidos exactamente alrededor de cómo trabaja tu negocio.",
+    trigger: "Para cuando tu equipo depende de hojas de cálculo, hilos de chat o herramientas desconectadas que frenan la ejecución.",
+    useCases: ["CRM y gestión de clientes", "Dashboards operacionales", "Portales internos y ERPs", "Sistemas de gestión de pedidos"],
   },
   {
-    icon: Database,
-    title: "CRM y Sistemas de Negocio",
-    problem: "Sin un sistema de clientes estructurado, los leads, seguimientos y el contexto de pedidos se pierden entre personas y canales.",
-    result: "Construimos sistemas CRM e internos que centralizan datos, mejoran el seguimiento y dan a los equipos mejor visibilidad del negocio.",
-  },
-  {
-    icon: Workflow,
-    title: "Automatización de Procesos",
-    problem: "El trabajo manual repetitivo ralentiza la entrega, aumenta los errores y mantiene a los equipos ocupados con tareas de bajo valor.",
-    result: "Automatizamos flujos clave para que tu negocio ahorre tiempo, reduzca errores humanos y escale sin agregar fricción innecesaria.",
+    icon: GitMerge,
+    eyebrow: "Automatización & APIs",
+    title: "Elimina el trabajo manual que no escala",
+    description:
+      "Flujos automáticos, integraciones entre sistemas, bots de atención, APIs y conectores que hacen que tu stack tecnológico funcione como uno solo.",
+    trigger: "Para cuando tu equipo gasta horas en tareas repetitivas o en copiar datos entre herramientas que no se comunican.",
+    useCases: ["Automatización de procesos", "Integración de sistemas", "Bots y flujos de notificación", "APIs y webhooks"],
   },
   {
     icon: Globe,
-    title: "Landing Pages y Plataformas Web",
-    problem: "Una presencia digital débil dificulta explicar tu oferta, capturar demanda y aparecer como un negocio serio.",
-    result: "Construimos landing pages y plataformas web que comunican valor claramente y apoyan la generación de leads, el comercio o la adopción del producto.",
+    eyebrow: "Web & Ecommerce",
+    title: "Presencia digital que convierte",
+    description:
+      "Landing pages de alto rendimiento, tiendas online, marketplaces, portales de clientes y plataformas de comercio diseñadas para generar resultados medibles.",
+    trigger: "Para cuando necesitas una plataforma web que explique tu oferta con claridad, capture demanda y soporte el crecimiento del negocio.",
+    useCases: ["Landing pages de conversión", "Tiendas y ecommerce", "Plataformas de comercio", "Portales de clientes"],
   },
   {
-    icon: MessageSquare,
-    title: "Bot de Ventas para WhatsApp",
-    problem: "Los negocios que gestionan ventas manualmente por WhatsApp pierden pedidos, olvidan seguimientos y no pueden escalar sin agregar personas.",
-    result: "Construimos bots de WhatsApp automatizados que manejan el flujo completo de ventas — catálogo, cotizaciones, captura de pedidos y notificaciones — sin intervención humana.",
+    icon: Rocket,
+    eyebrow: "MVPs & Productos SaaS",
+    title: "De la idea al producto en producción",
+    description:
+      "Arquitectura, diseño y desarrollo de productos digitales desde cero. Llevamos tu idea a un MVP funcional, comercialmente creíble y listo para iterar.",
+    trigger: "Para cuando tienes una idea de producto y necesitas convertirla en software real sin quemar meses en planificación infinita.",
+    useCases: ["MVPs funcionales en 4-8 semanas", "Productos SaaS completos", "Plataformas de suscripción", "Software de nicho"],
   },
 ]
 
@@ -48,55 +49,81 @@ export function ServicesSection() {
 
   useEffect(() => {
     const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setIsVisible(true)
-        }
-      },
-      { threshold: 0.12 },
+      ([entry]) => { if (entry.isIntersecting) setIsVisible(true) },
+      { threshold: 0.08 },
     )
-
-    const current = sectionRef.current
-
-    if (current) {
-      observer.observe(current)
-    }
-
-    return () => {
-      if (current) {
-        observer.unobserve(current)
-      }
-    }
+    const el = sectionRef.current
+    if (el) observer.observe(el)
+    return () => { if (el) observer.unobserve(el) }
   }, [])
+
+  const scrollToContact = (prefill?: string) => {
+    if (prefill) sessionStorage.setItem("contact_prefill", prefill)
+    document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" })
+  }
 
   return (
     <section id="services" ref={sectionRef} className="section-shell py-16 md:py-24">
+      <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-primary/30 to-transparent" />
       <div className="mx-auto max-w-7xl px-6">
-        <div className={`max-w-3xl transition-all duration-700 ${isVisible ? "translate-y-0 opacity-100" : "translate-y-8 opacity-0"}`}>
-          <span className="section-eyebrow">Servicios</span>
+        <div
+          className={`max-w-3xl transition-all duration-700 ${isVisible ? "translate-y-0 opacity-100" : "translate-y-8 opacity-0"}`}
+        >
+          <span className="section-eyebrow">Lo que construimos</span>
           <h2 className="mt-4 text-3xl font-semibold tracking-[-0.04em] text-foreground sm:text-4xl">
-            Desarrollo de software SaaS, automatización de procesos y plataformas web para negocios que quieren escalar.
+            Software que resuelve problemas de negocio reales.
           </h2>
           <p className="mt-5 text-lg leading-relaxed text-muted-foreground">
-            Cada servicio está construido alrededor de la pregunta concreta que hacen los negocios: ¿qué problema resuelve esto y qué cambia una vez que está funcionando?
+            No vendemos tecnología. Construimos sistemas que hacen que tu operación funcione mejor — desde el proceso interno hasta la plataforma que ven tus clientes.
           </p>
         </div>
 
-        <div className="mt-12 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
+        <div className="mt-12 grid gap-6 lg:grid-cols-2">
           {services.map((service, index) => (
             <article
               key={service.title}
-              className={`panel-hover rounded-[1.75rem] border border-border/70 bg-card/75 p-7 transition-all duration-700 ${isVisible ? "translate-y-0 opacity-100" : "translate-y-8 opacity-0"}`}
+              className={`panel-hover group flex flex-col rounded-[1.75rem] border border-border/70 bg-card/75 p-7 transition-all duration-700 ${isVisible ? "translate-y-0 opacity-100" : "translate-y-8 opacity-0"}`}
               style={{ transitionDelay: `${index * 100}ms` }}
             >
-              <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-primary/10 text-primary">
-                <service.icon className="h-6 w-6" />
+              <div className="flex items-start gap-4">
+                <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-primary/10 text-primary">
+                  <service.icon className="h-6 w-6" />
+                </div>
+                <div>
+                  <p className="text-xs uppercase tracking-[0.22em] text-muted-foreground">{service.eyebrow}</p>
+                  <h3 className="mt-1.5 text-lg font-semibold tracking-[-0.02em] text-foreground">{service.title}</h3>
+                </div>
               </div>
-              <h3 className="mt-5 text-xl font-semibold tracking-[-0.02em] text-foreground">{service.title}</h3>
-              <p className="mt-4 text-xs uppercase tracking-[0.24em] text-muted-foreground">Problema del negocio</p>
-              <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{service.problem}</p>
-              <p className="mt-5 text-xs uppercase tracking-[0.24em] text-primary">Qué resuelve esto</p>
-              <p className="mt-3 text-sm leading-relaxed text-foreground/88">{service.result}</p>
+
+              <p className="mt-5 text-sm leading-relaxed text-muted-foreground">{service.description}</p>
+
+              <div className="mt-5 rounded-2xl border border-border/60 bg-background/40 p-4">
+                <p className="text-xs uppercase tracking-[0.2em] text-muted-foreground">Cuándo tiene sentido</p>
+                <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{service.trigger}</p>
+              </div>
+
+              <div className="mt-5 flex flex-wrap gap-2">
+                {service.useCases.map((uc) => (
+                  <span
+                    key={uc}
+                    className="rounded-full border border-border/60 bg-background/50 px-3 py-1 text-xs text-muted-foreground"
+                  >
+                    {uc}
+                  </span>
+                ))}
+              </div>
+
+              <div className="mt-6 flex-1 flex items-end">
+                <Button
+                  variant="ghost"
+                  size="sm"
+                  className="rounded-full px-4 text-primary hover:bg-primary/8 hover:text-primary"
+                  onClick={() => scrollToContact(`Hola, me interesa ${service.eyebrow}. Aquí mi caso de uso:`)}
+                >
+                  Hablar sobre mi proyecto
+                  <ArrowRight className="h-4 w-4" />
+                </Button>
+              </div>
             </article>
           ))}
         </div>
